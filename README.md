@@ -1,4 +1,4 @@
-Welcome to My Profile Website!
+**Welcome to My Profile Website!**
 
 I'm delighted to have you here! This website serves as a space to showcase my work, projects, and interests. Here, you'll find a collection of projects and activities I'm involved in, giving you a better understanding of my skills and professional focus.
 
