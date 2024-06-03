@@ -3,40 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        .social-icons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .social-icons a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: #0077b5; /* LinkedIn blue */
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
-
-        .social-icons a.github {
-            background-color: #333; /* GitHub black */
-        }
-    </style>
 </head>
-<body> 
+<body>
     <header class="header">
         <a href="#home" class="logo">Veronika <span>Obrtelova</span></a>
-
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about me">About me</a>
+            <a href="#about-me">About me</a>
             <a href="#skills">Skills</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -47,60 +23,49 @@
             <h1>Hi, It's <span>Veronika</span></h1>
             <h3 class="text-animation">I'm a</h3>
             <p> fkgh,bkblk.nl..bkn </p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section clas="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-
-    <form action="">
-        <div class="input-group">
-            <div class="input-box">
-                <input type="text"
-                placeholder="Full Name">
-                <inpiut type="email"
-                placeholder="Email">
-            </div>
-            <div class="input-box">
-                <input type="nuber"
-                placeholder="Phone Number">
-                <input type="text"
-                placeholder="Subject">
-            </div>
-        </div>
-
-        <div class="input-group-2">
-            <textarea name="" id="" cols="30"
-            rows="10" placeholder="Your Message"></textarea>
-            <input type="submit" value="Send Message" class="btn">
-        </div>
-    </form>
-</section>
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
-            </div>
-
-            <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
         </div>
         <div class="home-img">
             <img src="img.jpeg" alt="">
         </div>
     </section>
 
-    <div class="container">
-        <h1>Projects</h1>
-        <div class="project">
-            <a href="https://to-do-list-delta-seven-71.vercel.app" class="project-link">
-                <h2>To-Do-List</h2>
-            </a>
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Contact Me</h2>
+            <button id="contactBtn" class="btn">Contact</button>
         </div>
-        <div class="project">
-            <a href="https://javascript-slider
+    </section>
 
-  
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form action="action_page.php">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+
+                <label for="subject">Subject</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
