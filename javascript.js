@@ -1,4 +1,4 @@
-// Získání modálního okna
+
 var modal = document.getElementById("contactModal");
 
 // Získání tlačítka, které otevře modální okno
