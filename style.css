@@ -142,4 +142,9 @@ section {
     animation: words 20s infinite;
 }
 
-.text
+.contact{
+    width: 100%; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+

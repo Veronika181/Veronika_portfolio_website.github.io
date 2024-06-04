@@ -9,72 +9,72 @@
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo">Veronika <span>Obrtelova</span></a>
+        <a href="#home" class="logo"> <span> Veronika <span>Obrtelova</span></a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about-me">About me</a>
-            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
-    <!-- Home -->
+
     <section class="home" id="home">
         <div class="home-content">
-            <h1>.. <span>Veronika Obrtelova</span></h1>
-            <h3 class="text-animation">I'm a</h3>
-            <p> fkgh,bkblk.nl..bkn </p>
+            <h1>Hi, <span>I'm Veronika</span></h1>
+            <h3 class="text-animation"></h3>
+            <p>A junior tester passionate about test automation, experienced in manual testing, currently seeking opportunities in the field.</p>
         </div>
         <div class="home-img">
             <img src="img.jpeg" alt="">
         </div>
     </section>
-    <!-- About me  -->
+
     <section class="about-me" id="about-me">
         <div class="about-me-content">
             <h2>About me </h2>
-            <button id="aboutmeBtn" class="btn">About me</button>
+            <button id="aboutmeBtn" class="btn"></button>
         </div>
     </section>
-    <!-- Skills -->
-    <section class="skills" id="skills">
-        <div class="skills-content">
-            <h2>Skills</h2>
-            <button id="skillstBtn" class="btn">Skills</button>
+
+    <section class="projects" id="projects">
+        <div class="projects-content">
+            <h2>Projects</h2>
+            <button id="projectstBtn" class="btn"></button>
         </div>
     </section>
-    <!-- Contact -->
+
     <section class="contact" id="contact">
         <div class="contact-content">
             <h2>Contact Me</h2>
-            <button id="contactBtn" class="btn">Contact</button>
+        </div>
+        <div id="contactModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="action_page.php" class="contact-form">
+                <div>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
+                </div>
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="text" id="email" name="email" placeholder="Your e-mail..">
+                </div>   
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                        <option value="czech republic">Czech republic</option>
+                        <option value="other">Other</option>
+                    </select>
+                <div>  
+                    <label for="subject">Message</label>
+                    <textarea id="subject" name="subject" placeholder="Write your message here..." style="height: 10rem;"></textarea>
+                </div>   
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </section>
-    <div id="contactModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <form action="action_page.php">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-                <label for="email">E-mail</label>
-                <input type="text" id="email" name="email" placeholder="Your e-mail..">
-
-                <label for="country">Country</label>
-                <select id="country" name="country">
-                    <option value="czech republic">Czech republic</option>
-                    <option value="other">Other</option>
-                </select>
-
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="subject" placeholder="Write message...." style="height:200px"></textarea>
-
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    </div>
 
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
