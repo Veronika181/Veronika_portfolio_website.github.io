@@ -145,13 +145,15 @@ section {
 }
 
 .contact-form input[type="text"],
-.contact-form select,
+.contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
     padding: 1rem;
     margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: var(--second-bg-color);
+    color: var(--text-color);
 }
 
 .contact-form input[type="submit"] {
@@ -164,7 +166,7 @@ section {
 }
 
 .contact-form input[type="submit"]:hover {
-    background-color: darken(var(--main-color), 10%);
+    background-color: #00e6e6; /* Adjust color for hover state */
 }
 
 /* Social Icons */
