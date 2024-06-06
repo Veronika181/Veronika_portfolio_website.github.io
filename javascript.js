@@ -1,4 +1,3 @@
-
 var modal = document.getElementById("contactModal");
 
 // Získání tlačítka, které otevře modální okno
@@ -24,5 +23,34 @@ window.onclick = function(event) {
     }
 }
 
+// EMAIL JS
+const contactForm = document.getElementById('contact-form');
+const contactMessage = document.getElementById('contact-message');
+
+const sendEmail = (e) =>{
+    e.preventDefault();
+
+    //serviceID - templateID - #form - publiciKey
+    emailjs.sendForm('service_7a8en68','template_kszvoxe','#contact-form','vHLZSw0qoz8cN3mB7')
+        .then(() => {
+            //Show sent message
+            contactMessage.textContent = 'Message sent successfully';
+
+            //Remove message after five seconds
+            setTimeout(() => {
+                contactMessage.textContent = '';
+            }, 5000);
+
+            // Clear input fields
+            contactForm.reset();
+        })
+        .catch(() => {
+            //Show error message
+            contactMessage.textContent = 'Message not sent (service error)';
+        });
+}
+
+contactForm.addEventListener('submit', sendEmail);
 
 
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>

@@ -47,33 +47,25 @@
         <div class="contact-content">
             <h2>Contact Me</h2>
         </div>
-        <div id="contactModal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <form action="action_page.php" class="contact-form">
-                <div>
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="firstname" placeholder="Your first name..">
-                </div>
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <div>
-                    <label for="email">E-mail</label>
-                    <input type="text" id="email" name="email" placeholder="Your e-mail..">
-                </div>   
-                    <label for="country">Country</label>
-                    <select id="country" name="country">
-                        <option value="czech republic">Czech republic</option>
-                        <option value="other">Other</option>
-                    </select>
-                <div>  
-                    <label for="subject">Message</label>
-                    <textarea id="subject" name="subject" placeholder="Write your message here..." style="height: 10rem;"></textarea>
-                </div>   
-                    <input type="submit" value="Submit">
-                </form>
+        <form action="https://formspree.io/f/xvoejybk" method="POST" class="contact-form">
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
             </div>
-        </div>
+            <div>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="Your e-mail.." required>
+            </div>
+            <div>
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Write your message here..." style="height: 10rem;" required></textarea>
+            </div>
+            <input type="submit" value="Submit">
+        </form>
     </section>
 
     <div class="social-icons">
@@ -84,3 +76,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
