@@ -40,8 +40,27 @@
         <div class="projects-content">
             <h2>Projects</h2>
             <button id="projectstBtn" class="btn"></button>
+            <!-- Projekt 1 -->
+            <div class="project">
+                <h3>Projekt 1</h3>
+                <button onclick="openModal('https://to-do-list-delta-seven-71.github.io/')" class="view-btn">View</button>
+            </div>
+            <!-- Projekt 2 -->
+            <div class="project">
+                <h3>Projekt 2</h3>
+                <button onclick="openModal('https://your-project2-url.com')" class="view-btn">View</button>
+            </div>
+            <!-- Přidejte další <div class="project"> pro další projekty podle potřeby -->
         </div>
     </section>
+
+    <!-- Modální okno -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <iframe id="modalIframe" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+        </div>
+    </div>
 
     <section class="contact" id="contact">
         <div class="contact-content">
@@ -74,5 +93,23 @@
     </div>
 
     <script src="script.js"></script>
+
+    <script>
+        // Otevřít modální okno s iframe
+        function openModal(url) {
+            var modal = document.getElementById("myModal");
+            var iframe = document.getElementById("modalIframe");
+            iframe.src = url;
+            modal.style.display = "block";
+        }
+
+        // Zavřít modální okno
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            var iframe = document.getElementById("modalIframe");
+            iframe.src = "";
+            modal.style.display = "none";
+        }
+    </script>
 </body>
 </html>
