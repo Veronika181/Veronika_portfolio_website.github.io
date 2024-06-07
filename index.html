@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo"> <span> Veronika <span>Obrtelova</span></a>
+        <a href="#home" class="logo"> <span> Veronika <span>Obrtelova</span></span></a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about-me">About me</a>
@@ -22,7 +22,14 @@
         <div class="home-content">
             <h1>Hi, <span>I'm Veronika</span></h1>
             <h3 class="text-animation"></h3>
-            <p>A junior tester passionate about test automation, experienced in manual testing, currently seeking opportunities in the field.</p>
+            <p>A passionate QA engineer based in Ostrava, Czech republic.</p>
+            <div class="hire-me-container">
+                <a href="#" class="hire-me-btn">Hire Me</a>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
         </div>
         <div class="home-img">
             <img src="img.jpeg" alt="">
@@ -32,6 +39,7 @@
     <section class="about-me" id="about-me">
         <div class="about-me-content">
             <h2>About me </h2>
+            <p>A junior tester passionate about test automation, experienced in manual testing, currently seeking opportunities in the field.</p>  
             <button id="aboutmeBtn" class="btn"></button>
         </div>
     </section>
@@ -43,18 +51,18 @@
             <!-- Projekt 1 -->
             <div class="project">
                 <h3>Projekt 1</h3>
-                <button onclick="openModal('https://to-do-list-delta-seven-71.github.io/')" class="view-btn">View</button>
+                <button onclick="openModal('https://github.com/Veronika181/To-Do-List')" class="view-btn">View</button>
             </div>
             <!-- Projekt 2 -->
             <div class="project">
                 <h3>Projekt 2</h3>
                 <button onclick="openModal('https://your-project2-url.com')" class="view-btn">View</button>
             </div>
-            <!-- Přidejte další <div class="project"> pro další projekty podle potřeby -->
+           
         </div>
     </section>
 
-    <!-- Modální okno -->
+    
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -95,7 +103,6 @@
     <script src="script.js"></script>
 
     <script>
-        // Otevřít modální okno s iframe
         function openModal(url) {
             var modal = document.getElementById("myModal");
             var iframe = document.getElementById("modalIframe");

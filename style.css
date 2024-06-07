@@ -243,3 +243,30 @@ section {
         font-size: 1.8rem;
     }
 }
+
+
+.hire-me-btn,
+.fire-me-btn {
+    background-color: white; /* Bílé pozadí */
+    color: black; /* Černý text */
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: 2px solid black; /* Volitelně: Přidáme ohraničení pro větší výraznost */
+    margin: 0 10px; /* Přizpůsobení pro zarovnání */
+}
+
+.hire-me-container {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* Mezera mezi tlačítkem a ikonami */
+}
