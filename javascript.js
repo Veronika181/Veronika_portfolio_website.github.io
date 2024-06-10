@@ -73,3 +73,19 @@ function closeModal() {
     iframe.src = "";
     modal.style.display = "none";
 }
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navbar = document.getElementById('navbar');
+
+    menuIcon.addEventListener('click', function() {
+        navbar.classList.toggle('active');
+    });
+
+    menuIcon.addEventListener('mouseover', function() {
+        navbar.classList.add('active');
+    });
+
+    navbar.addEventListener('mouseleave', function() {
+        navbar.classList.remove('active');
+    });
+});

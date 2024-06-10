@@ -216,6 +216,14 @@ section {
     color: var(--main-color);
 }
 
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
 /* Media Queries */
 @media (min-width: 768px) {
     html {
@@ -310,6 +318,10 @@ section {
         margin-top: 1rem;
         justify-content: center;
     }
+
+    .menu-icon {
+        display: block;
+    }
 }
 
 .button {
@@ -326,23 +338,23 @@ section {
     border-radius: 15px;
   }
   
-  .button:hover {
+.button:hover {
     background-color:#090909;
     color: #fff; 
-  }
-  
-  .button a {
+}
+
+.button a {
     color: inherit; 
     text-decoration: none;
-  }
+}
   
-  .button:active {
+.button:active {
     background-color: #00ffee;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
-  }
+}
   
-  .skills-content {
+.skills-content {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
@@ -362,14 +374,14 @@ section {
     padding: 10px; /* Odsazení uvnitř každé položky */
 }
 
-.skills-list li p {
-    font-size: 1.2em; /* Zvětšení velikosti popisku */
-    margin-bottom: 5px; /* Odsazení mezi popiskem a ikonou */
-}
-
 .skills-list li img {
     width: 100%;
     height: auto;
 }
-
-
+/* Hamburger Menu */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
