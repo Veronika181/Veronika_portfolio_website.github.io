@@ -142,6 +142,25 @@ section {
     margin-bottom: 2rem;
 }
 
+.project {
+    background: var(--second-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color);
+}
+
+.project img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
 /* Contact Section */
 .contact-content h2 {
     font-size: 3rem;

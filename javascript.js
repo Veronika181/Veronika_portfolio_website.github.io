@@ -59,3 +59,17 @@ if (contactForm) {
 
     contactForm.addEventListener('submit', sendEmail);
 }
+
+function openModal(url) {
+    var modal = document.getElementById("myModal");
+    var iframe = document.getElementById("modalIframe");
+    iframe.src = url;
+    modal.style.display = "block";
+}
+
+function closeModal() {
+    var modal = document.getElementById("myModal");
+    var iframe = document.getElementById("modalIframe");
+    iframe.src = "";
+    modal.style.display = "none";
+}
