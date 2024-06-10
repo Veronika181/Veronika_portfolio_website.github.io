@@ -282,17 +282,12 @@ section {
 }
 
 @media (max-width: 767px) {
-    .header {
-        padding: 2rem;
-    }
-
     .navbar {
         display: none;
         flex-direction: column;
         position: fixed;
         top: 5rem;
-        left: 0;
-        width: 100%;
+        right: 0;
         background: rgba(0, 0, 0, 0.7);
         padding: 2rem 0;
         z-index: 10;
