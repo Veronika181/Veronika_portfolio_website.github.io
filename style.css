@@ -342,3 +342,34 @@ section {
     transform: translateY(4px);
   }
   
+  .skills-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.skills-list li {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px; /* Odsazení uvnitř každé položky */
+}
+
+.skills-list li p {
+    font-size: 1.2em; /* Zvětšení velikosti popisku */
+    margin-bottom: 5px; /* Odsazení mezi popiskem a ikonou */
+}
+
+.skills-list li img {
+    width: 100%;
+    height: auto;
+}
+
+
