@@ -270,3 +270,8 @@ section {
     align-items: center;
     margin-left: 10px; /* Mezera mezi tlačítkem a ikonami */
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+

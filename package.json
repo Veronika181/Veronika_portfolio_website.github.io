@@ -1,0 +1,15 @@
+{
+  "name": "veronika_portfolio_website.github.io",
+  "version": "1.0.0",
+  "description": "**Welcome to My Profile Website!**",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.4"
+  }
+}
