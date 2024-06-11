@@ -166,12 +166,13 @@ section {
     border-radius: 10px; /* Border radius for project image */
     margin-bottom: 1rem; /* Margin bottom for project image */
 }
-/* Hamburger Menu */
+
+
 .menu-icon {
-    display: none; /* Initially hide the hamburger menu */
-    font-size: 30px; /* Font size for the hamburger icon */
-    cursor: pointer; /* Cursor style for the hamburger icon */
-    color: white; /* Color for the hamburger icon */
+    display: none; /* Skryjeme hamburger menu ikonu */
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
 }
 
 /* Media Queries */
