@@ -1,375 +1,168 @@
 /* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    scroll-behavior: smooth;
-    font-family: "Poppins", sans-serif;
+    margin: 0; /* Margin reset for all elements */
+    padding: 0; /* Padding reset for all elements */
+    box-sizing: border-box; /* Border-box box model for easier sizing */
+    text-decoration: none; /* Remove default text decoration */
+    border: none; /* Remove default borders */
+    outline: none; /* Remove default outline */
+    scroll-behavior: smooth; /* Smooth scrolling behavior */
+    font-family: "Poppins", sans-serif; /* Default font family */
 }
 
 /* Variables */
 :root {
-    --bg-color: #080808;
-    --second-bg-color: #131313;
-    --text-color: white;
-    --main-color: #00ffee;
+    --bg-color: #080808; /* Background color variable */
+    --second-bg-color: #131313; /* Secondary background color variable */
+    --text-color: white; /* Text color variable */
+    --main-color: #00ffee; /* Main color variable */
 }
 
 /* Base Styles */
 html {
-    font-size: 62.5%; /* 1rem = 10px */
-    overflow-x: hidden;
+    font-size: 62.5%; /* Set base font size for easier rem calculations */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
 body {
-    background: var(--bg-color);
-    color: var(--text-color);
-    font-size: 1.6rem; /* 16px */
-    line-height: 1.6;
+    background: var(--bg-color); /* Background color for body */
+    color: var(--text-color); /* Text color for body */
+    font-size: 1.6rem; /* Base font size */
+    line-height: 1.6; /* Base line height */
 }
 
 /* Header */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 2rem 10%;
-    background: rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 5;
+    position: fixed; /* Fixed positioning for header */
+    top: 0; /* Align header to the top */
+    left: 0; /* Align header to the left */
+    width: 100%; /* Full width for header */
+    padding: 2rem 10%; /* Padding for header */
+    background: rgba(0, 0, 0, 0.3); /* Background color for header with opacity */
+    backdrop-filter: blur(10px); /* Apply blur effect to header background */
+    display: flex; /* Flex display for header */
+    justify-content: space-between; /* Align items in header to space between */
+    align-items: center; /* Center align items vertically */
+    z-index: 5; /* Set z-index for stacking order */
 }
 
 .logo {
-    font-size: 2.5rem;
-    color: var(--text-color);
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.3s ease;
+    font-size: 2.5rem; /* Font size for logo */
+    color: var(--text-color); /* Text color for logo */
+    font-weight: 800; /* Font weight for logo */
+    cursor: pointer; /* Cursor style for logo */
+    transition: 0.3s ease; /* Transition effect for logo */
 }
 
 .logo:hover {
-    transform: scale(1.1);
+    transform: scale(1.1); /* Scale effect on logo hover */
 }
 
 .logo span {
-    text-shadow: 0 0 25px var(--main-color);
+    text-shadow: 0 0 25px var(--main-color); /* Text shadow effect for logo */
 }
 
 .navbar {
-    display: flex;
+    display: flex; /* Flex display for navigation bar */
 }
 
 .navbar a {
-    font-size: 1.6rem;
-    color: var(--text-color);
-    margin-left: 2rem;
-    font-weight: 500;
-    transition: 0.3s ease;
-    border-bottom: 3px solid transparent;
+    font-size: 1.6rem; /* Font size for navigation links */
+    color: var(--text-color); /* Text color for navigation links */
+    margin-left: 2rem; /* Margin left for navigation links */
+    font-weight: 500; /* Font weight for navigation links */
+    transition: 0.3s ease; /* Transition effect for navigation links */
+    border-bottom: 3px solid transparent; /* Transparent border bottom for navigation links */
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color);
-    border-bottom: 3px solid var(--main-color);
+    color: var(--main-color); /* Main color for active/hovered navigation links */
+    border-bottom: 3px solid var(--main-color); /* Border bottom color for active/hovered navigation links */
 }
 
 /* Section */
 section {
-    min-height: 100vh;
-    padding: 8rem 10%;
+    min-height: 100vh; /* Minimum height for sections */
+    padding: 8rem 10%; /* Padding for sections */
 }
 
 /* Home Section */
 .home {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    display: flex; /* Flex display for home section */
+    flex-direction: column; /* Column direction for home section */
+    align-items: center; /* Center align items in home section */
+    text-align: center; /* Center align text in home section */
 }
 
 .home-content {
-    margin-top: 3rem;
+    margin-top: 3rem; /* Margin top for home content */
 }
 
 .home-content h1 {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-top: 1.5rem;
-    line-height: 1.2;
+    font-size: 4rem; /* Font size for home content heading 1 */
+    font-weight: 700; /* Font weight for home content heading 1 */
+    margin-top: 1.5rem; /* Margin top for home content heading 1 */
+    line-height: 1.2; /* Line height for home content heading 1 */
 }
 
 .home-content h3 {
-    margin: 1rem 0 2rem;
-    font-size: 2.5rem;
+    margin: 1rem 0 2rem; /* Margin for home content heading 3 */
+    font-size: 2.5rem; /* Font size for home content heading 3 */
 }
 
 .home-content p {
-    font-size: 1.4rem;
-    max-width: 800px;
-    margin-bottom: 2rem;
+    font-size: 1.4rem; /* Font size for home content paragraph */
+    max-width: 800px; /* Maximum width for home content paragraph */
+    margin-bottom: 2rem; /* Margin bottom for home content paragraph */
 }
 
 .home-img img {
-    width: 80%;
-    max-width: 300px;
-    border-radius: 50%;
-    box-shadow: 0 0 25px var(--main-color);
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
+    width: 80%; /* Width for home image */
+    max-width: 300px; /* Maximum width for home image */
+    border-radius: 50%; /* Border radius for home image */
+    box-shadow: 0 0 25px var(--main-color); /* Box shadow for home image */
+    cursor: pointer; /* Cursor style for home image */
+    transition: 0.4s ease-in-out; /* Transition effect for home image */
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color); /* Box shadow effect on hover for home image */
 }
 
 /* About Me Section */
 .about-me-content h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 3rem; /* Font size for about me section heading 2 */
+    margin-bottom: 2rem; /* Margin bottom for about me section heading 2 */
 }
 
 /* Skills Section */
 .skills-content h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 3rem; /* Font size for skills section heading 2 */
+    margin-bottom: 2rem; /* Margin bottom for skills section heading 2 */
 }
 
 /* Projects Section */
 .projects-content h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    font-size: 3rem; /* Font size for projects section heading 2 */
+    margin-bottom: 2rem; /* Margin bottom for projects section heading 2 */
 }
 
 .project {
-    background: var(--second-bg-color);
-    padding: 2rem;
-    border-radius: 10px;
-    margin-bottom: 2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--second-bg-color); /* Background color for project */
+    padding: 2rem; /* Padding for project */
+    border-radius: 10px; /* Border radius for project */
+    margin-bottom: 2rem; /* Margin bottom for project */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for project */
 }
 
 .project:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px var(--main-color);
+    transform: scale(1.05); /* Scale effect on hover for project */
+    box-shadow: 0 0 25px var(--main-color); /* Box shadow effect on hover for project */
 }
 
 .project img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-}
-
-/* Contact Section */
-.contact-content h2 {
-    font-size: 3rem;
-    margin-bottom: 2rem;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: var(--second-bg-color);
-    color: var(--text-color);
-}
-
-.contact-form input[type="submit"] {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    padding: 1rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contact-form input[type="submit"]:hover {
-    background-color: #00e6e6; /* Adjust color for hover state */
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
-}
-
-.social-icons a {
-    font-size: 2rem;
-    color: var(--text-color);
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: var(--main-color);
-}
-
-/* Hamburger Menu */
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-}
-
-/* Media Queries */
-@media (min-width: 768px) {
-    html {
-        font-size: 68.75%; /* 1rem = 11px */
-    }
-
-    .header {
-        padding: 4rem 10%;
-    }
-
-    .navbar a {
-        font-size: 1.8rem;
-        margin-left: 4rem;
-    }
-
-    .home {
-        flex-direction: row;
-        text-align: left;
-        justify-content: space-between;
-    }
-
-    .home-content h1 {
-        font-size: 6rem;
-    }
-
-    .home-content h3 {
-        font-size: 3.5rem;
-    }
-
-    .home-content p {
-        font-size: 1.6rem;
-    }
-
-    .home-img img {
-        width: 32vw;
-        max-width: none;
-    }
-}
-
-@media (min-width: 1024px) {
-    html {
-        font-size: 75%; /* 1rem = 12px */
-    }
-
-    .home-content h1 {
-        font-size: 7rem;
-    }
-
-    .home-content h3 {
-        font-size: 4rem;
-    }
-
-    .home-content p {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 767px) {
-    .navbar {
-        display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 5rem;
-        right: 0;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 2rem 0;
-        z-index: 10;
-        transform: translateY(-100%);
-        transition: transform 0.3s ease;
-    }
-
-    .navbar.show {
-        transform: translateY(0);
-    }
-
-    .navbar a {
-        margin: 1rem 0;
-        border-bottom: none;
-    }
-
-    .hire-me-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .social-icons {
-        margin-top: 1rem;
-        justify-content: center;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-}
-
-.button {
-    display: inline-block;
-    padding: 15px 25px;
-    font-size: 24px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: #000000; 
-    background-color: #fff; 
-    border: 2px solid #000000; 
-    border-radius: 15px;
-  }
-  
-.button:hover {
-    background-color:#090909;
-    color: #fff; 
-}
-
-.button a {
-    color: inherit; 
-    text-decoration: none;
-}
-  
-.button:active {
-    background-color: #00ffee;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-  
-.skills-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.skills-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    list-style: none;
-}
-
-.skills-list li {
-    width: calc(33.33% - 20px);
-    margin-bottom: 20px;
-    text-align: center;
-    padding: 10px; /* Odsazení uvnitř každé položky */
-}
-
-.skills-list li img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Width for project image */
+    border-radius: 10px; /* Border radius for project image */
+    margin-bottom: 1rem; /* Margin bottom for project image */
 }
