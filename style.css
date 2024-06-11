@@ -127,7 +127,7 @@ section {
 }
 
 .home-img img:hover {
-    box-shadow: 0 0 25px var(--main-color), 0 0 50px var (--main-color), 0 0 100px var (--main-color);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
 }
 
 /* About Me Section */
@@ -288,51 +288,20 @@ section {
         position: fixed;
         top: 5rem;
         right: 0;
-        background: var(--bg-color); /* Change background to black */
+        background: rgba(0, 0, 0, 0.7);
         padding: 2rem 0;
         z-index: 10;
-        width: 100%;
-        text-align: center;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
     }
 
     .navbar.show {
-        display: flex;
+        transform: translateY(0);
     }
 
     .navbar a {
         margin: 1rem 0;
         border-bottom: none;
-    }
-
-    .home-content h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin-top: 1.5rem;
-        line-height: 1.2;
-    }
-
-    .home-content h3 {
-        margin: 1rem 0 2rem;
-        font-size: 2.5rem;
-    }
-
-    .home-content p {
-        font-size: 1.4rem;
-    }
-
-    .home-img img {
-        width: 80%;
-        max-width: 300px;
-    }
-
-    .projects-content h2 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .project {
-        padding: 1rem;
-        margin-bottom: 1rem;
     }
 
     .hire-me-container {
@@ -362,7 +331,7 @@ section {
     background-color: #fff; 
     border: 2px solid #000000; 
     border-radius: 15px;
-}
+  }
   
 .button:hover {
     background-color:#090909;
