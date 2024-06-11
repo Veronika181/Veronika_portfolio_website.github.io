@@ -1,175 +1,88 @@
 /* Reset */
 * {
-    margin: 0; /* Margin reset for all elements */
-    padding: 0; /* Padding reset for all elements */
-    box-sizing: border-box; /* Border-box box model for easier sizing */
-    text-decoration: none; /* Remove default text decoration */
-    border: none; /* Remove default borders */
-    outline: none; /* Remove default outline */
-    scroll-behavior: smooth; /* Smooth scrolling behavior */
-    font-family: "Poppins", sans-serif; /* Default font family */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Variables */
 :root {
-    --bg-color: #080808; /* Background color variable */
-    --second-bg-color: #131313; /* Secondary background color variable */
-    --text-color: white; /* Text color variable */
-    --main-color: #00ffee; /* Main color variable */
+    --bg-color: #080808;
+    --second-bg-color: #131313;
+    --text-color: white;
+    --main-color: #00ffee;
 }
 
 /* Base Styles */
 html {
-    font-size: 62.5%; /* Set base font size for easier rem calculations */
-    overflow-x: hidden; /* Hide horizontal overflow */
+    font-size: 62.5%;
+    overflow-x: hidden;
 }
 
 body {
-    background: var(--bg-color); /* Background color for body */
-    color: var(--text-color); /* Text color for body */
-    font-size: 1.6rem; /* Base font size */
-    line-height: 1.6; /* Base line height */
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.6;
 }
 
 /* Header */
 .header {
-    position: fixed; /* Fixed positioning for header */
-    top: 0; /* Align header to the top */
-    left: 0; /* Align header to the left */
-    width: 100%; /* Full width for header */
-    padding: 2rem 10%; /* Padding for header */
-    background: rgba(0, 0, 0, 0.3); /* Background color for header with opacity */
-    backdrop-filter: blur(10px); /* Apply blur effect to header background */
-    display: flex; /* Flex display for header */
-    justify-content: space-between; /* Align items in header to space between */
-    align-items: center; /* Center align items vertically */
-    z-index: 5; /* Set z-index for stacking order */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 10%;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
 }
 
 .logo {
-    font-size: 2.5rem; /* Font size for logo */
-    color: var(--text-color); /* Text color for logo */
-    font-weight: 800; /* Font weight for logo */
-    cursor: pointer; /* Cursor style for logo */
-    transition: 0.3s ease; /* Transition effect for logo */
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .logo:hover {
-    transform: scale(1.1); /* Scale effect on logo hover */
+    transform: scale(1.1);
 }
 
 .logo span {
-    text-shadow: 0 0 25px var(--main-color); /* Text shadow effect for logo */
+    text-shadow: 0 0 25px var(--main-color);
 }
 
 .navbar {
-    display: flex; /* Flex display for navigation bar */
+    display: flex;
 }
 
 .navbar a {
-    font-size: 1.6rem; /* Font size for navigation links */
-    color: var(--text-color); /* Text color for navigation links */
-    margin-left: 2rem; /* Margin left for navigation links */
-    font-weight: 500; /* Font weight for navigation links */
-    transition: 0.3s ease; /* Transition effect for navigation links */
-    border-bottom: 3px solid transparent; /* Transparent border bottom for navigation links */
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
 }
 
 .navbar a:hover,
 .navbar a.active {
-    color: var(--main-color); /* Main color for active/hovered navigation links */
-    border-bottom: 3px solid var(--main-color); /* Border bottom color for active/hovered navigation links */
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
 }
-
-/* Section */
-section {
-    min-height: 100vh; /* Minimum height for sections */
-    padding: 8rem 10%; /* Padding for sections */
-}
-
-/* Home Section */
-.home {
-    display: flex; /* Flex display for home section */
-    flex-direction: column; /* Column direction for home section */
-    align-items: center; /* Center align items in home section */
-    text-align: center; /* Center align text in home section */
-}
-
-.home-content {
-    margin-top: 3rem; /* Margin top for home content */
-}
-
-.home-content h1 {
-    font-size: 4rem; /* Font size for home content heading 1 */
-    font-weight: 700; /* Font weight for home content heading 1 */
-    margin-top: 1.5rem; /* Margin top for home content heading 1 */
-    line-height: 1.2; /* Line height for home content heading 1 */
-}
-
-.home-content h3 {
-    margin: 1rem 0 2rem; /* Margin for home content heading 3 */
-    font-size: 2.5rem; /* Font size for home content heading 3 */
-}
-
-.home-content p {
-    font-size: 1.4rem; /* Font size for home content paragraph */
-    max-width: 800px; /* Maximum width for home content paragraph */
-    margin-bottom: 2rem; /* Margin bottom for home content paragraph */
-}
-
-.home-img img {
-    width: 80%; /* Width for home image */
-    max-width: 300px; /* Maximum width for home image */
-    border-radius: 50%; /* Border radius for home image */
-    box-shadow: 0 0 25px var(--main-color); /* Box shadow for home image */
-    cursor: pointer; /* Cursor style for home image */
-    transition: 0.4s ease-in-out; /* Transition effect for home image */
-}
-
-.home-img img:hover {
-    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color); /* Box shadow effect on hover for home image */
-}
-
-/* About Me Section */
-.about-me-content h2 {
-    font-size: 3rem; /* Font size for about me section heading 2 */
-    margin-bottom: 2rem; /* Margin bottom for about me section heading 2 */
-}
-
-/* Skills Section */
-.skills-content h2 {
-    font-size: 3rem; /* Font size for skills section heading 2 */
-    margin-bottom: 2rem; /* Margin bottom for skills section heading 2 */
-}
-
-/* Projects Section */
-.projects-content h2 {
-    font-size: 3rem; /* Font size for projects section heading 2 */
-    margin-bottom: 2rem; /* Margin bottom for projects section heading 2 */
-}
-
-.project {
-    background: var(--second-bg-color); /* Background color for project */
-    padding: 2rem; /* Padding for project */
-    border-radius: 10px; /* Border radius for project */
-    margin-bottom: 2rem; /* Margin bottom for project */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for project */
-}
-
-.project:hover {
-    transform: scale(1.05); /* Scale effect on hover for project */
-    box-shadow: 0 0 25px var(--main-color); /* Box shadow effect on hover for project */
-}
-
-.project img {
-    width: 100%; /* Width for project image */
-    border-radius: 10px; /* Border radius for project image */
-    margin-bottom: 1rem; /* Margin bottom for project image */
-}
-
 
 .menu-icon {
-    display: none; /* Skryjeme hamburger menu ikonu */
+    display: none;
     font-size: 30px;
     cursor: pointer;
     color: white;
@@ -178,7 +91,7 @@ section {
 /* Media Queries */
 @media (max-width: 767px) {
     .navbar {
-        display: none; /* Skryjeme menu pro mobilní zařízení */
+        display: none;
         flex-direction: column;
         position: fixed;
         top: 5rem;
@@ -191,6 +104,7 @@ section {
     }
 
     .navbar.show {
+        display: flex;
         transform: translateY(0);
     }
 
@@ -200,6 +114,7 @@ section {
     }
 
     .menu-icon {
-        display: block; /* Zobrazíme hamburger menu ikonu */
+        display: block;
     }
 }
+
