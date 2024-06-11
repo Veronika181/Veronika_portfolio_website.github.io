@@ -177,28 +177,28 @@ section {
 /* Media Queries */
 @media (max-width: 767px) {
     .navbar {
-        display: none; /* Initially hide the navigation links for small screens */
-        flex-direction: column; /* Set flex direction to column for better alignment */
-        position: fixed; /* Fixed positioning for the navbar */
-        top: 5rem; /* Position the navbar 5rem from the top */
-        right: 0; /* Position the navbar on the right */
-        background: rgba(0, 0, 0, 0.7); /* Background color for the navbar with opacity */
-        padding: 2rem 0; /* Padding for the navbar */
-        z-index: 10; /* Set z-index for stacking order */
-        transform: translateY(-100%); /* Initially hide the navbar off the screen */
-        transition: transform 0.3s ease; /* Smooth transition for showing/hiding the navbar */
+        display: none; /* Skryjeme menu pro mobilní zařízení */
+        flex-direction: column;
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem 0;
+        z-index: 10;
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
     }
 
     .navbar.show {
-        transform: translateY(0); /* Show the navbar by translating it to 0 */
+        transform: translateY(0);
     }
 
     .navbar a {
-        margin: 1rem 0; /* Margin for the navigation links */
-        border-bottom: none; /* Remove the border bottom from the navigation links */
+        margin: 1rem 0;
+        border-bottom: none;
     }
 
     .menu-icon {
-        display: block; /* Display the hamburger menu icon for small screens */
+        display: block; /* Zobrazíme hamburger menu ikonu */
     }
 }
