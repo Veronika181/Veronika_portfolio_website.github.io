@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navbar = document.getElementById('navbar');
 
     menuIcon.addEventListener('click', function () {
-        navbar.classList.toggle('active');
+        navbar.classList.toggle('show');
     });
 });
+
