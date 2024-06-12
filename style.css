@@ -134,6 +134,35 @@ header {
     box-shadow: 0 0 25px #00ffee; 
 }
 
+
+.home-content .veronika {
+    color: #00ffee; /* Modrá barva */
+}
+
+/* CSS */
+@keyframes slideIn {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.text-content h1 span {
+    color: #00ffee; /* Modrá barva */
+    font-size: 64px;
+}
+
+
+.text-content h1 {
+    color: white; /* Bílá barva */
+}
+
+
+
 /* Animace psaní */
 @keyframes typing {
     from { width: 0 }
@@ -169,24 +198,137 @@ header {
     margin-bottom: 10px; /* Odsazení od dalších elementů */
 }
 
-/* CSS */
-@keyframes slideIn {
-    from {
-        transform: translateY(50%);
-        opacity: 0;
+* Base Styles */
+html {
+    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    background: #000; /* Černé pozadí */
+    color: #fff; /* Bílá barva textu */
+    font-size:
+}
+
+
+.contact-form-section{
+    display:none;
+}
+
+.contact {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ffee;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #00ccdd;
+}
+.contact {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-content h2 {
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #fff; /* Úprava barvy rámečků na bílou */
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #00ffee;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #00ccdd;
+}
+
+/* Responzivní styly */
+@media only screen and (min-width: 768px) {
+    .contact-form {
+        width: 50%;
+        margin: 0 auto;
     }
-    to {
-        transform: translateY(0);
-        opacity: 1;
+}
+
+@media only screen and (min-width: 1024px) {
+    .contact-form {
+        width: 40%;
     }
 }
-
-.text-content h1 span {
-    color: #00ffee; /* Modrá barva */
-    font-size: 64px;
-}
-
-.contact-form-section {
-    display: none;
-}
-

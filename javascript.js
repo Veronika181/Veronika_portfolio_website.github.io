@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 var typed = new Typed(".animated-text", {
     strings:["Veronika Obrtelova"],
-    typeSpeed: 70,
-    backSpeed: 55,
-    startDelay: 500, // Zpoždění animace na 500 ms
+    typeSpeed: 20,
+    backSpeed: 5,
+    startDelay: 500, 
     loop: true
 });
 
