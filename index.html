@@ -9,29 +9,30 @@
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo"> <span>Veronika <span>Obrtelova</span></span></a>
+        <a href="#home" class="logo"> <span>Veronika <span>Obrtelova</span></a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about-me">About Me</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contact</a> <!-- Přidání kontaktu -->
         </nav>
     </header>
 
     <section class="home" id="home">
         <div class="home-content">
             <div class="text-content">
-                <h1>Hi, I'm<h1>
+                <h1>Hi, I'm</h1>
                 <div></div>
-                <h2></span> <span class="animated-text">Veronika Obrtelova</h2>
+                <h2></span> <span class="animated-text">Veronika Obrtelova</h2></span></h2>
                 <h3 class="text-animation"></h3>
                 <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
 
                 <div class="btn-group">
                     <a href="resume.pdf" download="Veronika_Obrtelova_CV_EN.pdf" class="btn btn-small">Download CV</a>
-                    <a href="#" class="btn btn-small">Contact</a>
+                    <a href="#contact" class="btn btn-small" onclick="openContact()">Contact</a>
                 </div>
+                
                
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
@@ -80,7 +81,7 @@
                     <li>
                         <h3>Testing - Digital Academy</h3>
                         <p>Czechitas</p>
-                        <p>Course included: Introduction to Testing, Handling Requirements and Testing Techniques, Test Analysis and Design, Ticketing Systems, Fundamentals of Web Browsers, Effective Communication for Testers, Overview of Testing Theory, Regression and Smoke Testing, API Layer Testing, Introduction to Databases, Basics of Test Automation, Future Trends in Testing, Testing Principles Across Various Systems, Presentation Skills, Study Skills Improvement, API Automation using Postman, Cybersecurity Essentials, GIT Version Control, Exploratory Testing Methods, UI Automation with Selenium WebDriver.</p>
+                        <p>Course included: Introduction to Testing, Handling Requirements and Testing Techniques, Test Analysis and Design, Ticketing Systems, Fundamentals of Web Browsers, Effective Communication                         for Testers, Overview of Testing Theory, Regression and Smoke Testing, API Layer Testing, Introduction to Databases, Basics of Test Automation, Future Trends in Testing, Testing Principles Across Various Systems, Presentation Skills, Study Skills Improvement, API Automation using Postman, Cybersecurity Essentials, GIT Version Control, Exploratory Testing Methods, UI Automation with Selenium WebDriver.</p>
                     </li>
                     <li>
                         <h3>Basic of Python Programming</h3>
@@ -89,12 +90,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="about-me-language-skills">
-                <h2>Language Skills</h2>
-                <ul>
-                    <li>Czech - Native</li>
-                    <li>English - B1</li>
-                    <li>German - A2</li>
+            <section class="skills" id="skills">
+                <div class="skills-contect">
+                    <div class="about-me-description">       
                 </ul>
             </div>
             <div class="about-me-skills">
@@ -105,13 +103,16 @@
                     <li>Framework: <img src="574px-Selenium_Logo.png" alt="Test Automation Icon"></li>
                     <li>Programming Languages - Python <img src="python.png" alt="Python Icon"></li>
                     <li>Web Technologies - HTML <img src="html-5.png" alt="HTML Icon">, CSS <img src="css-3.png" alt="CSS Icon">, JavaScript <img src="js.png" alt="JavaScript Icon"></li>
-                    <li>Tools - GitHub <img src="github.png" alt="GitHub Icon">
-                    <li></li> JIRA <img src="jira.png" alt="JIRA Icon"></li>
+                    <li>Tools - GitHub <img src="github.png" alt="GitHub Icon"></li>
+                    <li> JIRA <img src="jira.png" alt="JIRA Icon"></li>
                 </ul>
             </div>
+            <h2>Language Skills</h2>
+                <ul>
+                    <li>Czech - Native</li>
+                    <li>English - B1</li>
+                    <li>German - A2</li>
         </div>
-    </section>
-    
     </section>
     <section class="projects" id="projects">
         <div class="projects-content">   
@@ -143,6 +144,15 @@
         </div>
     </div>
     <section class="contact" id="contact">
+        <script>
+            function openContact() {
+                var contactSection = document.getElementById('contact');
+                contactSection.style.display = 'block';
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        </script>
+        </body>
+        </html>
         <div class="contact-content">
             <h2>Contact Me</h2>
         </div>
@@ -173,5 +183,5 @@
     <script src="script.js"></script>
 </body>
 </html>
-</body>
-</html>
+
+     
