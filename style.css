@@ -34,7 +34,7 @@ header {
 .header .navbar a.active,
 .header .navbar a:hover {
     text-decoration: underline;
-    color: #00ffee; /* Změna barvy */
+    color: #00ffee; 
 }
 
 .home {
@@ -62,7 +62,7 @@ header {
 .home-content h1 {
     font-size: 48px; /* Zvětšení písma */
     margin-bottom: 10px;
-    color: #00ffee; /* Změna barvy */
+    color: white; /* Změna barvy */
 }
 
 .home-content h1 span {
@@ -135,4 +135,62 @@ header {
 
 .home-content .veronika {
     color: #00ffee; /* Modrá barva */
+}
+/* CSS */
+@keyframes slideIn {
+    from {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.text-content h1 span {
+    color: #00ffee; /* Modrá barva */
+    font-size: 64px;
+}
+
+
+.text-content h1 {
+    color: white; /* Bílá barva */
+}
+
+
+
+/* Animace psaní */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange }
+}
+
+.text-content h1 {
+    color: white; /* Bílá barva */
+    font-size: 36px; /* Velikost písma */
+    margin-bottom: 10px; /* Odsazení od dalších elementů */
+}
+
+.home-content h1 span {
+    color: white; /* Modrá barva */
+    font-size: 64px; /* Velikost písma */
+    font-weight: bold; /* Tučné písmo */
+}
+
+.home-content h2 span {
+    color: #00ffee;
+    font-size: 64px; /* Velikost písma */
+    font-weight: bold; /* Tučné písmo */
+}
+
+.text-content h2 {
+    color: #00ffee;
+    font-size: 36px; /* Velikost písma */
+    margin-bottom: 10px; /* Odsazení od dalších elementů */
 }

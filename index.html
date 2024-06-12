@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo"> <span id="typed"></span></a>
+        <a href="#home" class="logo"> <span>Veronika <span>Obrtelova</span></span></a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about-me">About Me</a>
@@ -22,12 +22,15 @@
     <section class="home" id="home">
         <div class="home-content">
             <div class="text-content">
-                <h1><span class="hi-im">Hi, I'm </span><br><span class="veronika">Veronika Obrtelova</span></h1>
-                <h3 class="text-animation">I am a passionate QA engineer from Ostrava, Czech Republic.</h3>
+                <h1>Hi, I'm<h1>
+                <div></div>
+                <h2></span> <span class="animated-text">Veronika Obrtelova</h2>
+                <h3 class="text-animation"></h3>
+                <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
 
                 <div class="btn-group">
-                    <a href="#" class="btn">Download CV</a>
-                    <a href="#" class="btn">Contact</a>
+                    <a href="#" class="btn btn-small">Download CV</a>
+                    <a href="#" class="btn btn-small">Contact</a>
                 </div>
                
                 <div class="social-icons">
@@ -41,16 +44,26 @@
                 <img src="img.jpeg" alt="Veronika Obrtelova">
             </div>
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var typed = new Typed(".animated-text", {
+                    strings: ["Veronika Obrtelova"],
+                    typeSpeed: 70,
+                    backSpeed: 55,
+                    loop: true
+                });
+            });
+        </script>
     </section>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
-        var typed = new Typed("#typed", {
-            strings: ["Veronika Obrtelova"],
-            typeSpeed: 70,
-            backSpeed: 55,
-            loop: true
-        });
-    </script>
+    <section class="about-me" id="about-me">
+        <div class="about-me-content">
+            <!-- Tady bude obsah sekce "About Me" -->
+        </div>
+    </section>
+
+    <!-- Další sekce ... -->
+
 </body>
 </html>
