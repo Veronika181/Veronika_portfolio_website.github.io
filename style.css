@@ -4,6 +4,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #000; /* Černé pozadí */
+    color: #fff; /* Bílá barva textu */
 }
 
 header {
@@ -136,6 +138,7 @@ header {
 .home-content .veronika {
     color: #00ffee; /* Modrá barva */
 }
+
 /* CSS */
 @keyframes slideIn {
     from {
@@ -194,3 +197,15 @@ header {
     font-size: 36px; /* Velikost písma */
     margin-bottom: 10px; /* Odsazení od dalších elementů */
 }
+
+* Base Styles */
+html {
+    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
+    overflow-x: hidden;
+}
+
+body {
+    background: #000; /* Černé pozadí */
+    color: #fff; /* Bílá barva textu */
+    font-size:
