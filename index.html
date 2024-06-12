@@ -9,10 +9,10 @@
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo"> <span> Veronika <span>Obrtelova</span></span></a>
+        <a href="#home" class="logo"> <span id="typed"></span></a>
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
-            <a href="#about-me">About me</a>
+            <a href="#about-me">About Me</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -21,183 +21,36 @@
 
     <section class="home" id="home">
         <div class="home-content">
-            <h1>Hi, <span>I'm Veronika</span></h1>
-            <h3 class="text-animation"></h3>
-            <p>A passionate QA engineer based in Ostrava, Czech republic.</p>
-            <div class="hire-me-container">
-            <stahnotu cv></stahnotu>
+            <div class="text-content">
+                <h1><span class="hi-im">Hi, I'm </span><br><span class="veronika">Veronika Obrtelova</span></h1>
+                <h3 class="text-animation">I am a passionate QA engineer from Ostrava, Czech Republic.</h3>
+
+                <div class="btn-group">
+                    <a href="#" class="btn">Download CV</a>
+                    <a href="#" class="btn">Contact</a>
+                </div>
+               
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
                     <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail"><i class="far fa-envelope"></i></a>
                 </div>
             </div>
-        </div>
-        <div class="home-img">
-            <img src="img.jpeg" alt="">
-        </div>
-    </section>
-
-    <section class="about-me" id="about-me">
-        <div class="about-me-content">
-            <h2>About me </h2>
-            <p>Junior tester with a passion for test automation. I strive to learn and improve my software testing skills daily. With experience in manual testing and a focus on automation, I strive to better support development teams and ensure high quality and reliability of software. I am looking for an environment where I can continue to grow, apply my knowledge and enthusiasm for technology in practice and contribute to the success of projects and teams.</p>  
-        <div>  
-            <h2>Work experience</h2>
-            <p>sfsfd</p>
-            <h3>Position: Junior QA engineer</h3>
-            <p>Firm: Creditas digital factory s.r.o.</p>
-            <p>About position</p>
-            <p> manual testing
-                regression testing
-                bug reporting
-                working with team
-                tech stack: JIRA, Confluence, Kibana, JMeter
-
             
-            <p>Education and training</p>
-            <p>Date</p>
-            <p>Testing - Digital academy  </p>
-            <p>Czechitas</p> odkaz
-            Course included:
-            Introduction to Testing, Handling Requirements and Testing Techniques, Test Analysis and Design, Ticketing Systems, Fundamentals of Web Browsers, Effective Communication for Testers, Overview of Testing Theory, Regression and Smoke Testing, API Layer Testing, Introduction to Databases, Basics of Test Automation, Future Trends in Testing, Testing Principles Across Various Systems, Presentation Skills, Study Skills Improvement, API Automation using Postman, Cybersecurity Essentials, GIT Version Control, Exploratory Testing Methods, UI Automation with Selenium WebDriver.
-            
-            
-            
-            <p></p>
-            <p>Date</p>
-            <p>Basic of Python Programming</p> 
-            <p>Pyladies</p>Odkaz
-            <p>Courses included:
-            Conditions and Functions, Loops, String, Erorrs and Modules, Interfaces and Tests, Lists and Tuples, Sequences and Files, Dictionaries, Classes and inheritance, Graphics
-
-            <p></p>
-            <p>Language skills</p>
-            <p>Czech</p>   Native
-            <p>English</p> B1
-            <p>German</p>  A2
-            </p>
-            </Junior>
-        </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <div class="skills-content">
-            <h2>Skills</h2>
-            
-            <h3>Testing</h3>
-            <ul class="skills-list testing">
-                <li>
-                    <p>Manual Testing</p>
-                    <img src="Manual Testing-3.png" alt="Manual Testing Icon">
-                </li>
-                <li>
-                    <p>Test Automation</p>
-                    <img src="automated.png" alt="Test Automation Icon">
-                    <p>Framework: <span style="font-size: smaller;">Selenium</span></p>
-                    <img src="574px-Selenium_Logo.png" alt="Selenium Icon">
-                </li>
-            </ul>
-            
-            <h3>Programming Languages</h3>
-            <ul class="skills-list languages">
-                <li>
-                    <p>Python</p>
-                    <img src="python.png" alt="Python Icon">
-                </li>
-            </ul>
-            
-            <h3>Web Technologies</h3>
-            <ul class="skills-list web-tech">
-                <li>
-                    <p>HTML</p>
-                    <img src="html-5.png" alt="HTML Icon">
-                </li>
-                <li>
-                    <p>CSS</p>
-                    <img src="css-3.png" alt="CSS Icon"> 
-                </li>
-                <li>
-                    <p>JavaScript</p>
-                    <img src="js.png" alt="JavaScript Icon">
-                </li>
-            </ul>
-            
-            <h3>Tools</h3>
-            <ul class="skills-list tools">
-                <li>
-                    <p>GitHub</p>
-                    <img src="github.png" alt="GitHub Icon">
-                </li>
-                <li>
-                    <p>JIRA</p>
-                    <img src="jira.png" alt="JIRA Icon">
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <div class="projects-content">   
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>To do list</h3>
-                <p>This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.</p>
-                <img src="To do list.png" alt="">
-                <div class="button-container">
-                    <button class="button"><a href="https://veronika-to-do-list.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
-                    <button class="button"><a href="https://github.com/Veronika181/To-Do-List" target="_blank" rel="noopener noreferrer">View Code</a></button>
-                </div>
-            </div>
-            <div class="project">
-                <h3>Javascript slider</h3>
-                <p>This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.</p>
-                <img src="Javascript slider.png" alt="">
-                <div class="button-container">
-                    <button class="button"><a href="https://veronika-javascript-slider.netlify.app" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
-                    <button class="button"><a href="https://github.com/Veronika181/Javascript-Slider" target="_blank" rel="noopener noreferrer">View Code</a></button>
-                </div>
+            <div class="home-img">
+                <img src="img.jpeg" alt="Veronika Obrtelova">
             </div>
         </div>
     </section>
 
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <iframe id="modalIframe" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
-        </div>
-    </div>
-
-    <section class="contact" id="contact">
-        <div class="contact-content">
-            <h2>Contact Me</h2>
-        </div>
-        <form action="https://formspree.io/f/xvoejybk" method="POST" class="contact-form">
-            <div>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
-            </div>
-            <div>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-            </div>
-            <div>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Your e-mail.." required>
-            </div>
-            <div>
-                <label for="subject">Message</label>
-                <textarea id="subject" name="message" placeholder="Write your message here..." style="height: 10rem;" required></textarea>
-            </div>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+        var typed = new Typed("#typed", {
+            strings: ["Veronika Obrtelova"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+    </script>
 </body>
 </html>
-
