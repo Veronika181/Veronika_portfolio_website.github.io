@@ -9,13 +9,28 @@
 </head>
 <body>
     <header class="header">
-        <a href="#home" class="logo"> <span>Veronika <span>Obrtelova</span></a>
-        <nav class="navbar">
-            <a href="#home" class="active">Home</a>
-            <a href="#about-me">About Me</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a> <!-- Přidání kontaktu -->
+        <a href="#home" class="logo">Veronika <span>Obrtelova</span></a>
+        <button class="menu-button" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav class="navbar hideOnMobile">
+            <ul class="navbar-list">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <nav class="sidebar">
+            <ul class="sidebar-list">
+                <li onclick="toggleSidebar()"><a href="#"><i class="fas fa-times"></i></a></li>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -23,26 +38,21 @@
         <div class="home-content">
             <div class="text-content">
                 <h1>Hi, I'm</h1>
-                <div></div>
-                <h2></span> <span class="animated-text">Veronika Obrtelova</h2></span></h2>
+                <h2><span class="animated-text">Veronika Obrtelova</span></h2>
                 <h3 class="text-animation"></h3>
                 <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
-
                 <div class="btn-group">
                     <a href="resume.pdf" download="Veronika_Obrtelova_CV_EN.pdf" class="btn btn-small">Download CV</a>
                     <a href="#contact" class="btn btn-small" onclick="openContact()">Contact</a>
                 </div>
-                
-               
                 <div class="social-icons">
                     <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
                     <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail"><i class="far fa-envelope"></i></a>
                 </div>
             </div>
-            
             <div class="home-img">
-                <img src="img.jpeg" alt="Veronika Obrtelova">
+                <img src="Portfolio/images/img.jpeg"> 
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
@@ -81,107 +91,105 @@
                     <li>
                         <h3>Testing - Digital Academy</h3>
                         <p>Czechitas</p>
-                        <p>Course included: Introduction to Testing, Handling Requirements and Testing Techniques, Test Analysis and Design, Ticketing Systems, Fundamentals of Web Browsers, Effective Communication                         for Testers, Overview of Testing Theory, Regression and Smoke Testing, API Layer Testing, Introduction to Databases, Basics of Test Automation, Future Trends in Testing, Testing Principles Across Various Systems, Presentation Skills, Study Skills Improvement, API Automation using Postman, Cybersecurity Essentials, GIT Version Control, Exploratory Testing Methods, UI Automation with Selenium WebDriver.</p>
+                        <p>Course included: Introduction to Testing, Handling Requirements and Testing Techniques, Test Analysis and Design, Ticketing Systems, Fundamentals of Web Browsers, Effective Communication for Testers, Overview of Testing Theory, Regression and Smoke Testing, API Layer Testing, Introduction to Databases, Basics of Test Automation, Future Trends in Testing, Testing Principles Across Various Systems, Presentation Skills, Study Skills Improvement, API Automation using Postman, Cybersecurity Essentials, GIT Version Control, Exploratory Testing Methods, UI Automation with Selenium WebDriver.</p>
                     </li>
                     <li>
                         <h3>Basic of Python Programming</h3>
                         <p>Pyladies</p>
-                        <p>Courses included: Conditions and Functions, Loops, String, Erorrs and Modules, Interfaces and Tests, Lists and Tuples, Sequences and Files, Dictionaries, Classes and inheritance, Graphics</p>
+                        <p>Courses included: Conditions and Functions, Loops, String, Errors and Modules, Interfaces and Tests, Lists and Tuples, Sequences and Files, Dictionaries, Classes and inheritance, Graphics</p>
                     </li>
                 </ul>
             </div>
-            <section class="skills" id="skills">
-                <div class="skills-contect">
-                    <div class="about-me-description">       
-                </ul>
-            </div>
-            <div class="about-me-skills">
-                <h2>Skills</h2>
-                <ul>
-                    <li>Testing - Manual Testing  <img src="Manual Testing-3.png" alt="Manual testing"></li>
-                    <li>Test Automation <img src="automated.png"alt="Automated testing"></li>
-                    <li>Framework: <img src="574px-Selenium_Logo.png" alt="Test Automation Icon"></li>
-                    <li>Programming Languages - Python <img src="python.png" alt="Python Icon"></li>
-                    <li>Web Technologies - HTML <img src="html-5.png" alt="HTML Icon">, CSS <img src="css-3.png" alt="CSS Icon">, JavaScript <img src="js.png" alt="JavaScript Icon"></li>
-                    <li>Tools - GitHub <img src="github.png" alt="GitHub Icon"></li>
-                    <li> JIRA <img src="jira.png" alt="JIRA Icon"></li>
-                </ul>
-            </div>
-            <h2>Language Skills</h2>
-                <ul>
-                    <li>Czech - Native</li>
-                    <li>English - B1</li>
-                    <li>German - A2</li>
         </div>
     </section>
+    
+    <section class="skills" id="skills">
+        <div class="skills-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Testing - Manual Testing <img src="Portfolio/images/Manual Testing-3.png" alt="Manual testing"></li>
+                <li>Test Automation <img src="Portfolio/images/automated.png" alt="Automated testing"></li>
+                <li>Framework: <img src="Portfolio/images/574px-Selenium_Logo.png" alt="Test Automation Icon"></li>
+                <li>Programming Languages - Python <img src="Portfolio/images/python.png" alt="Python Icon"></li>
+                <li>Web Technologies - HTML <img src="Portfolio/images/html-5.png" alt="HTML Icon">, CSS <img src="Portfolio/images/css-3.png" alt="CSS Icon">, JavaScript <img src="Portfolio/images/js.png" alt="JavaScript Icon"></li>
+                <li>Tools - GitHub <img src="Portfolio/images/github.png" alt="GitHub Icon"></li>
+                <li> JIRA <img src="Portfolio/images/jira.png" alt="JIRA Icon"></li>
+            </ul>
+            <h2>Language Skills</h2>
+            <ul>
+                <li>Czech - Native</li>
+                <li>English - B1</li>
+                <li>German - A2</li>
+            </ul>
+        </div>
+    </section>
+    
     <section class="projects" id="projects">
-        <div class="projects-content">   
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>To do list</h3>
-                <p>This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.</p>
-                <img src="To do list.png" alt="">
+        <h2 class="projects-content">Projects</h2>
+    
+        <div class="projects">
+            <article class="projects__card">
+                <a href="https://veronika-to-do-list.netlify.app/" target="_blank" class="projects__link">
+                    <h2 class="projects__title">To Do List</h2>
+                    <p class="projects__description">
+                        This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.
+                    </p>
+                    <img src="Portfolio/images/To do list.png" alt="To Do List project">
+                </a>
                 <div class="button-container">
                     <button class="button"><a href="https://veronika-to-do-list.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
                     <button class="button"><a href="https://github.com/Veronika181/To-Do-List" target="_blank" rel="noopener noreferrer">View Code</a></button>
                 </div>
-            </div>
-            <div class="project">
-                <h3>Javascript slider</h3>
-                <p>This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.</p>
-                <img src="Javascript slider.png" alt="">
+            </article>
+    
+            <article class="projects__card">
+                <a href="https://veronika-javascript-slider.netlify.app/" target="_blank" class="projects__link">
+                    <h2 class="projects__title">JavaScript Slider</h2>
+                    <p class="projects__description">
+                        This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.
+                    </p>
+                    <img src="Portfolio/images/Javascript slider.png" alt="JavaScript Slider project">
+                </a>
                 <div class="button-container">
-                    <button class="button"><a href="https://veronika-javascript-slider.netlify.app" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
+                    <button class="button"><a href="https://veronika-javascript-slider.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Website</a></button>
                     <button class="button"><a href="https://github.com/Veronika181/Javascript-Slider" target="_blank" rel="noopener noreferrer">View Code</a></button>
                 </div>
-            </div>
+            </article>
         </div>
-    </section>
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <iframe id="modalIframe" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
-        </div>
-    </div>
-    <section class="contact" id="contact">
-        <script>
-            function openContact() {
-                var contactSection = document.getElementById('contact');
-                contactSection.style.display = 'block';
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-            }
-        </script>
-        </body>
-        </html>
-        <div class="contact-content">
-            <h2>Contact Me</h2>
-        </div>
-        <form action="https://formspree.io/f/xvoejybk" method="POST" class="contact-form">
-            <div>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your first name.." required>
+        <body>
+            <div class="wrapper">
+                <div class="contact-form">
+                    <h2>Contact me</h2>
+                    <form action="#" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            
+                <div class="contact-info">
+                    <h2>Contact info</h2>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin fa-2x"></a>
+                        <a href="https://github.com/" target="_blank" class="fab fa-github fa-2x"></a>
+                    </div>
+                </div>
             </div>
-            <div>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
-            </div>
-            <div>
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="Your e-mail.." required>
-            </div>
-            <div>
-                <label for="subject">Message</label>
-                <textarea id="subject" name="message" placeholder="Write your message here..." style="height: 10rem;" required></textarea>
-            </div>
-            <input type="submit" value="Submit">
-        </form>
-    </section>
-    <div class="social-icons">
-        <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
-        <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
-    </div>
-    <script src="script.js"></script>
+    </section>    
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('show');
+        }
+
+        document.querySelectorAll('.sidebar-list a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.querySelector('.sidebar').classList.remove('show');
+            });
+        });
+    </script>
 </body>
 </html>
-
-     

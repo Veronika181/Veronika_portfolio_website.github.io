@@ -22,23 +22,107 @@ header {
     text-decoration: none;
 }
 
-.header .navbar {
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.navbar {
     display: flex;
 }
 
-.header .navbar a {
-    color: white;
+.navbar-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-list li {
     margin-left: 20px;
+}
+
+.navbar-list a {
+    color: white;
     text-decoration: none;
     font-size: 24px; /* Zvětšení písma */
 }
 
-.header .navbar a.active,
-.header .navbar a:hover {
+.navbar-list a.active,
+.navbar-list a:hover {
     text-decoration: underline;
-    color: #00ffee; 
+    color: #00ffee;
 }
 
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.show {
+    transform: translateX(0);
+    display: flex;
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.sidebar-list li {
+    width: 100%;
+}
+
+.sidebar-list a {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px; 
+}
+
+.sidebar-list a:hover,
+.sidebar-list a.active {
+    background-color: #00ffee;
+    color: #000;
+}
+
+@media (max-width: 800px) {
+    .hideOnMobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+/* Home Section */
 .home {
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +130,7 @@ header {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    background: #000; /* Změna barvy */
+    background: #000; 
 }
 
 .home-content {
@@ -62,9 +146,9 @@ header {
 }
 
 .home-content h1 {
-    font-size: 48px; /* Zvětšení písma */
+    font-size: 48px; 
     margin-bottom: 10px;
-    color: white; /* Změna barvy */
+    color: white; 
 }
 
 .home-content h1 span {
@@ -72,13 +156,13 @@ header {
 }
 
 .home-content h3 {
-    font-size: 32px; /* Zvětšení písma */
+    font-size: 32px; 
     margin-bottom: 20px;
     color: white;
 }
 
 .home-content p {
-    font-size: 24px; /* Zvětšení písma */
+    font-size: 24px; 
     margin-bottom: 30px;
     color: white;
 }
@@ -111,8 +195,8 @@ header {
 
 .social-icons a {
     color: #00ffee; /* Změna barvy */
-    margin: 0 20px; 
-    font-size: 40px; 
+    margin: 0 20px;
+    font-size: 40px;
     transition: color 0.3s;
 }
 
@@ -128,18 +212,17 @@ header {
 }
 
 .home-img img {
-    max-width: 100%; 
-    height: auto; 
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
-    box-shadow: 0 0 25px #00ffee; 
+    box-shadow: 0 0 25px #00ffee;
 }
-
 
 .home-content .veronika {
     color: #00ffee; /* Modrá barva */
 }
 
-/* CSS */
+/* Animation */
 @keyframes slideIn {
     from {
         transform: translateY(50%);
@@ -156,22 +239,28 @@ header {
     font-size: 64px;
 }
 
-
 .text-content h1 {
     color: white; /* Bílá barva */
 }
 
-
-
-/* Animace psaní */
+/* Typing Animation */
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: orange }
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
 }
 
 .text-content h1 {
@@ -198,137 +287,229 @@ header {
     margin-bottom: 10px; /* Odsazení od dalších elementů */
 }
 
-* Base Styles */
+/* Base Styles */
 html {
-    font-size: 62.5%;
     font-size: 62.5%; /* 1rem = 10px */
     overflow-x: hidden;
 }
 
 body {
-    background: #000; /* Černé pozadí */
-    color: #fff; /* Bílá barva textu */
-    font-size:
-}
-
-
-.contact-form-section{
-    display:none;
-}
-
-.contact {
     background-color: #000;
     color: #fff;
-    padding: 50px 20px;
-    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.contact-content h2 {
-    margin-bottom: 20px;
+.wrapper {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* poloprůhledné černé pozadí */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .contact-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-group {
+    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
     margin-bottom: 20px;
-    text-align: left;
 }
 
-label {
+.contact-form h2 {
+    color: #00ffee;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left; /* Zarovnání textu doleva */
+}
+
+.contact-form label {
+    color: #00ffee;
     display: block;
     margin-bottom: 5px;
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #fff;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: transparent;
-    color: #fff;
+    background-color: #333; /* tmavé pozadí pro input a textarea */
+    color: #fff; /* bílá barva textu */
 }
 
-button[type="submit"] {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.contact-form button {
     background-color: #00ffee;
-    color: #000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
     cursor: pointer;
+    border-radius: 5px;
     transition: background-color 0.3s;
+    margin-top: 10px;
 }
 
-button[type="submit"]:hover {
-    background-color: #00ccdd;
+.contact-form button:hover {
+    background-color: #0099cc;
 }
-.contact {
-    background-color: #000;
-    color: #fff;
-    padding: 50px 20px;
+
+.contact-info {
+    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
-.contact-content h2 {
-    margin-bottom: 20px;
+.contact-info h2 {
+    color: #00ffee;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-.contact-form {
+.social-links {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-.form-group {
+.social-links a {
+    font-size: 2em;
+    margin: 0 10px;
+    color: #00ffee;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: white;
+}
+
+@keyframes glowing {
+    0% { text-shadow: 0 0 50px rgba(0, 255, 238, 0.8); }
+    50% { text-shadow: 0 0 80px rgba(0, 255, 238, 0.9); }
+    100% { text-shadow: 0 0 50px rgba(0, 255, 238, 0.8); }
+}
+
+
+.projects-content {
+    text-align: center;
+    font-size: 8rem; 
+    margin-top: 80px;
+    color: transparent; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    background-image: linear-gradient(90deg, #00ffee, #00ffee); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    text-shadow: 0 0 40px rgba(0, 255, 238, 0.8); 
+    animation: glowing 2s linear infinite; 
+}
+
+
+
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 40px;
+    background-color: #000; /* Černé pozadí */
+    padding: 80px 0;
+    text-align: center;
+}
+
+.projects__card {
+    width: 45%;
+    background-color: #00ffee; /* Modrá barva pozadí karty */
+    color: #000; /* Černá barva textu */
     margin-bottom: 20px;
-    text-align: left;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    border-radius: 8px;
+    border: 1px solid #0056b3; /* Černé ohraničení */
+    text-align: left; /* Zarovnání textu v kartě na levou stranu */
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
+.projects__card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-input[type="text"],
-input[type="email"],
-textarea {
+.projects__link {
+    text-decoration: none;
+    color: #000; /* Černá barva textu */
+}
+
+.projects__title {
+    font-size: 3rem; /* Velikost písma názvu */
+    margin-bottom: 10px;
+    font-weight: bold;
+    color:#00ffee;
+    text-transform: uppercase; /* Tučné písmo pro název */
+}
+
+.projects__description {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.projects__card img {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #fff; /* Úprava barvy rámečků na bílou */
-    border-radius: 5px;
-    background-color: transparent;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.button-container {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.button-container .button {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.button-container .button a {
+    text-decoration: none;
     color: #fff;
-}
-
-button[type="submit"] {
-    padding: 10px 20px;
-    border: none;
+    background-color: #000; /* Černá barva pro tlačítka */
+    padding: 12px 24px; /* Zvětšení paddingu pro lepší klikatelnost */
     border-radius: 5px;
-    background-color: #00ffee;
-    color: #000;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    border: 2px solid #000; /* Černé ohraničení */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #00ccdd;
+.button-container .button a:hover {
+    background-color: #000000;
 }
 
-/* Responzivní styly */
-@media only screen and (min-width: 768px) {
-    .contact-form {
-        width: 50%;
-        margin: 0 auto;
+/* Media queries pro responzivní design */
+@media (max-width: 1024px) {
+    .projects__card {
+        width: 90%; /* Změna šířky karty na 90% šířky kontejneru na menších obrazovkách */
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    .contact-form {
-        width: 40%;
+@media (max-width: 768px) {
+    .projects {
+        padding: 50px 0; /* Menší padding pro mobilní zařízení */
+    }
+
+    .projects__card {
+        width: 100%; /* Na mobilních zařízeních šířka karty 100% */
     }
 }
