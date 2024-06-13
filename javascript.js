@@ -56,3 +56,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 var typedInstance = null;
 
+document.addEventListener("DOMContentLoaded", function() {
+    const contactForm = document.getElementById('contact-form');
+    const contactMessage = document.getElementById('contact-message');
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs.sendForm('service_7a8en68', 'template_9cvklkh', '#contact-form', 'vHLZSw0qoz8cN3mB7')
+            .then(() => {
+                contactMessage.textContent = 'Message sent successfully';
+                setTimeout(() => {
+                    contactMessage.textContent = '';
+                }, 5000);
+                contactForm.reset();
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                contactMessage.textContent = 'Error sending message. Please try again later.';
+            });
+    };
+
+    contactForm.addEventListener('submit', sendEmail);
+});
