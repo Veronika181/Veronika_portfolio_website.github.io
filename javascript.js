@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Toggle sidebar functionality
     var sidebar = document.querySelector('.sidebar');
     var menuButton = document.querySelector('.menu-button');
     var closeSidebarButton = document.querySelector('.close-sidebar');
@@ -12,54 +13,46 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     document.querySelectorAll('.sidebar-list a').forEach(function(link) {
-        link.addEventListener('click', function() {
+        link.addEventListener('click', function(e) {
             sidebar.classList.remove('show');
+            e.preventDefault(); // Prevent default behavior of anchor link
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+
+    // Initialize Typed.js if it's available
+    if (typeof Typed !== 'undefined') {
+        var typed = new Typed(".animated-text", {
+            strings: ["Veronika Obrtelova"],
+            typeSpeed: 20,
+            backSpeed: 5,
+            startDelay: 500,
+            loop: true
+        });
+    }
+
+    // Smooth scrolling for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            var targetId = this.getAttribute('href').substring(1);
+            var targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         });
     });
 });
 
 
-var typed = new Typed(".animated-text", {
-    strings:["Veronika Obrtelova"],
-    typeSpeed: 20,
-    backSpeed: 5,
-    startDelay: 500, 
-    loop: true
-});
 
-
-const nodemailer = require('nodemailer');
-
-exports.handler = async (event, context) => {
-    const { firstname, lastname, subject } = JSON.parse(event.body);
-
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'your-email@gmail.com', // nahraďte vlastní emailovou adresou
-            pass: 'your-email-password'   // nahraďte vlastním heslem
-        }
-    });
-
-    let mailOptions = {
-        from: 'your-email@gmail.com',
-        to: 'recipient-email@example.com', // nahraďte cílovou emailovou adresou
-        subject: `New contact from ${firstname} ${lastname}`,
-        text: subject
-    };
-
-    try {
-        let info = await transporter.sendMail(mailOptions);
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'Email sent: ' + info.response })
-        };
-    } catch (error) {
-        return {
-            statusCode: 500,
-            body: JSON.stringify({ message: error.toString() })
-        };
-    }
-};
-
+var typedInstance = null;
 

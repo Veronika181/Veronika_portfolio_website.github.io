@@ -3,9 +3,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: none;
     background-color: #000; /* Černé pozadí */
-    color: #fff; /* Bílá barva textu */
+    color: rgb(0, 0, 0); /* Bílá barva textu */
 }
 
 header {
@@ -13,7 +13,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #080808; /* Změna barvy */
+    background-color: #000000; /* Změna barvy */
 }
 
 .header .logo {
@@ -26,7 +26,7 @@ header {
     display: none;
     background: none;
     border: none;
-    color: white;
+    color:rgb(255, 255, 255);
     font-size: 28px;
     cursor: pointer;
 }
@@ -46,16 +46,17 @@ header {
     margin-left: 20px;
 }
 
+
 .navbar-list a {
-    color: white;
-    text-decoration: none;
-    font-size: 24px; /* Zvětšení písma */
+        color: rgb(0, 0, 0); 
+        text-decoration: none;
+        font-size: 24px; /* Zvětšení písma */
 }
+    
 
 .navbar-list a.active,
 .navbar-list a:hover {
-    text-decoration: underline;
-    color: #00ffee;
+    color: #000000;
 }
 
 .sidebar {
@@ -96,7 +97,7 @@ header {
     display: block;
     width: 100%;
     padding: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     font-size: 24px; 
 }
@@ -355,8 +356,8 @@ body {
     background-color: #00ffee;
     color: white;
     border: none;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 20px 50px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -394,7 +395,7 @@ body {
 }
 
 .social-links a:hover {
-    color: white;
+    color: rgb(0, 0, 0);
 }
 
 @keyframes glowing {
@@ -402,76 +403,80 @@ body {
     50% { text-shadow: 0 0 80px rgba(0, 255, 238, 0.9); }
     100% { text-shadow: 0 0 50px rgba(0, 255, 238, 0.8); }
 }
-
-
-.projects-content {
-    text-align: center;
-    font-size: 8rem; 
-    margin-top: 80px;
-    color: transparent; 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-image: linear-gradient(90deg, #00ffee, #00ffee); 
-    -webkit-background-clip: text; 
-    background-clip: text;
-    text-shadow: 0 0 40px rgba(0, 255, 238, 0.8); 
-    animation: glowing 2s linear infinite; 
-}
-
-
-
-
 .projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 40px;
-    background-color: #000; /* Černé pozadí */
-    padding: 80px 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color:#000000;
+}
+
+.projects-heading {
     text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
 }
 
-.projects__card {
-    width: 45%;
-    background-color: #00ffee; /* Modrá barva pozadí karty */
-    color: #000; /* Černá barva textu */
-    margin-bottom: 20px;
+.projects-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    padding: 0 20px;
+}
+
+.project-card {
+    background-color: rgb(0, 0, 0);
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
     border-radius: 8px;
-    border: 1px solid #0056b3; /* Černé ohraničení */
-    text-align: left; /* Zarovnání textu v kartě na levou stranu */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
 }
 
-.projects__card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.projects__link {
-    text-decoration: none;
-    color: #000; /* Černá barva textu */
-}
-
-.projects__title {
-    font-size: 3rem; /* Velikost písma názvu */
+.project-title {
+    font-size: 1.5rem;
     margin-bottom: 10px;
-    font-weight: bold;
-    color:#00ffee;
-    text-transform: uppercase; /* Tučné písmo pro název */
 }
 
-.projects__description {
-    line-height: 1.6;
-    margin-bottom: 15px;
+.project-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
 }
 
-.projects__card img {
+.project-description img{
     width: 100%;
     height: auto;
-    margin-bottom: 10px;
-    border-radius: 8px;
+    display: block;
+    margin-top: 20px;
 }
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ffee;
+    color:rgb(0, 0, 0);
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.project-link:hover {
+    background-color: #00ffee;
+}
+
 
 .button-container {
     margin-top: 15px;
@@ -512,4 +517,245 @@ body {
     .projects__card {
         width: 100%; /* Na mobilních zařízeních šířka karty 100% */
     }
+}
+
+/* Obecné styly pro stránku */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: black; /* Černé pozadí */
+    color: white; /* Bílý text */
+}
+
+/* Styly pro sekci skills */
+.skills {
+    padding: 50px 0; /* Vnitřní odsazení */
+    text-align: center;
+    width: 100%; /* Šířka přes celou stránku */
+    box-sizing: border-box; /* Včetně paddingu do šířky */
+}
+
+.skills h2 {
+    color: #00ffee; /* Zářivě modrá barva pro nadpis Skills */
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.container {
+    width: 100%; /* Šířka přes celou stránku */
+    margin: 0 auto; /* Zarovnání na střed */
+    padding: 0 20px; /* Vnější odsazení */
+    box-sizing: border-box; /* Včetně paddingu do šířky */
+}
+
+.skills-category {
+    margin-bottom: 50px; /* Mezera mezi kategoriemi dovedností */
+}
+
+.skills-category h3 {
+    color: #00ffee; /* Zářivě modrá barva pro nadpisy kategorií */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.skills-list {
+    display: flex; /* Rozložení dovedností do řady */
+    flex-wrap: wrap; /* Přerušení dovedností na více řádcích, pokud je potřeba */
+    justify-content: space-around; /* Zarovnání dovedností s rovnoměrným rozestupem */
+    gap: 20px; /* Mezera mezi jednotlivými dovednostmi */
+}
+
+.skill {
+    flex: 1 1 calc(33.333% - 40px); /* Dovednost má flexibilní šířku na základě obsahu */
+    max-width: calc(33.333% - 40px); /* Maximální šířka dovednosti */
+    padding: 20px; /* Vnitřní odsazení dovednosti */
+    background-color: #00ffee; /* Tmavě šedá barva pozadí dovednosti */
+    text-align: center; /* Zarovnání textu na střed */
+    border-radius: 10px; /* Zaoblené rohy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Přidání stínu */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animace při přejetí myší */
+    box-sizing: border-box; /* Včetně paddingu do šířky */
+}
+
+.skill:hover {
+    transform: translateY(-10px); /* Posunutí nahoru při přejetí myší */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Zvýraznění stínu při přejetí myší */
+}
+
+.skill img {
+    max-width: 50px; /* Maximální šířka ikony */
+    margin-bottom: 10px; /* Mezera pod ikonou */
+}
+
+.skill h4 {
+    margin: 0;
+    font-size: 1.2em;
+    color:rgb(0, 0, 0); /* Zářivě modrá barva pro názvy dovedností */
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    .skill {
+        flex: 1 1 calc(50% - 20px); /* Flexibilní šířka na menších obrazovkách */
+        max-width: calc(50% - 20px); /* Maximální šířka dovednosti */
+    }
+}
+
+@media (max-width: 480px) {
+    .skill {
+        flex: 1 1 100%; /* Flexibilní šířka na velmi malých obrazovkách */
+        max-width: 100%; /* Maximální šířka dovednosti */
+    }
+}
+
+/* Responzivní design */
+@media (max-width: 768px) {
+    .skills-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* About Me Section */
+.about-me {
+    background-color: #000000;
+    padding: 50px 0;
+    
+}
+
+.about-me-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-me-description, .about-me-work-education {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #00ffee;
+}
+
+.blue-line {
+    width: 50px;
+    height: 4px;
+    background-color: #000000;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-me-section {
+    margin-bottom: 40px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #00ffee;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: scale(1.05);
+}
+
+li h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+li p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+strong {
+    color: #00ffee;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .about-me-content {
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8em;
+    }
+
+    .about-me-description, .about-me-work-education {
+        margin-bottom: 20px;
+    }
+
+    .about-me-section h2 {
+        font-size: 1.6em;
+    }
+
+    li {
+        padding: 15px;
+    }
+}
+/* Centering and styling the section headers */
+.section-header {
+    text-align: center;
+    font-size: 2.5rem; /* Same size for all headers */
+    margin: 50px 0;
+    position: relative;
+}
+
+.projects-header {
+    color: #ff6600; /* Vibrant color for the Projects header */
+    font-size: 3rem; /* Larger font size for Projects header */
+}
+
+/* Add a line under the headers */
+.section-header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #000;
+    margin: 10px auto;
+}
+
+.projects-header::after {
+    background: #ff6600; /* Matching color for the line under the Projects header */
 }
