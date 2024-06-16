@@ -1,20 +1,29 @@
 /* General Styles */
-body {
-    font-family: Arial, sans-serif;
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: white;
     margin: 0;
     padding: 0;
-    box-sizing: none;
-    background-color: #000; /* Černé pozadí */
-    color: rgb(0, 0, 0); /* Bílá barva textu */
-    overflow: hidden;
+    line-height: 1.6;
 }
 
+.wrapper {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Styles */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #000000;
     padding: 20px;
-    background-color: #000000; /* Změna barvy */
 }
 
 .header .logo {
@@ -27,11 +36,18 @@ header {
     display: none;
     background: none;
     border: none;
-    color:rgb(255, 255, 255);
+    color: white;
     font-size: 28px;
     cursor: pointer;
 }
 
+@media (max-width: 800px) {
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Navbar Styles */
 .navbar {
     display: flex;
 }
@@ -47,13 +63,11 @@ header {
     margin-left: 20px;
 }
 
-
 .navbar-list a {
-        color: rgb(0, 0, 0); 
-        text-decoration: none;
-        font-size: 24px; 
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
 }
-    
 
 .navbar-list a.active,
 .navbar-list a:hover {
@@ -61,10 +75,6 @@ header {
 }
 
 @media (max-width: 800px) {
-    .menu-button {
-        display: block;
-    }
-
     .navbar {
         display: none;
         flex-direction: column;
@@ -95,6 +105,8 @@ header {
         margin: 10px 0;
     }
 }
+
+/* Sidebar Styles */
 .sidebar {
     position: fixed;
     top: 0;
@@ -133,30 +145,9 @@ header {
     display: block;
     width: 100%;
     padding: 20px;
-    color: rgb(0, 0, 0);
+    color: #000000;
     text-decoration: none;
-    font-size: 24px; 
-}
-
-.sidebar-list a:hover,
-.sidebar-list a.active {
-    background-color: #00ffee;
-    color: #000;
-}
-
-@media (max-width: 800px) {
-    .hideOnMobile {
-        display: none;
-    }
-    .menu-button {
-        display: block;
-    }
-}
-
-@media (max-width: 400px) {
-    .sidebar {
-        width: 100%;
-    }
+    font-size: 24px;
 }
 
 /* Home Section */
@@ -167,25 +158,17 @@ header {
     align-items: center;
     min-height: 100vh;
     padding: 20px;
-    background: #000; 
+    background: #000000;
 }
 
 .home-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.text-content {
     flex: 1;
 }
 
 .home-content h1 {
-    font-size: 48px; 
+    font-size: 48px;
+    color: white;
     margin-bottom: 10px;
-    color: white; 
 }
 
 .home-content h1 span {
@@ -193,15 +176,15 @@ header {
 }
 
 .home-content h3 {
-    font-size: 32px; 
-    margin-bottom: 20px;
+    font-size: 32px;
     color: white;
+    margin-bottom: 20px;
 }
 
 .home-content p {
-    font-size: 24px; 
-    margin-bottom: 30px;
+    font-size: 24px;
     color: white;
+    margin-bottom: 30px;
 }
 
 .btn-group {
@@ -210,17 +193,17 @@ header {
 
 .btn {
     display: inline-block;
-    padding: 15px 30px; /* Zvětšení tlačítka */
+    padding: 15px 30px;
     margin: 10px;
     color: white;
-    background-color: #333; /* Změna barvy */
+    background-color: #333;
     text-decoration: none;
-    border-radius: 8px; /* Zaoblené rohy */
+    border-radius: 8px;
     transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #090909; /* Změna barvy */
+    background-color: #090909;
 }
 
 .social-icons {
@@ -231,7 +214,7 @@ header {
 }
 
 .social-icons a {
-    color: #00ffee; /* Změna barvy */
+    color: #00ffee;
     margin: 0 20px;
     font-size: 40px;
     transition: color 0.3s;
@@ -256,199 +239,21 @@ header {
 }
 
 .home-content .veronika {
-    color: #00ffee; /* Modrá barva */
-}
-
-/* Animation */
-@keyframes slideIn {
-    from {
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-.text-content h1 span {
-    color: #00ffee; /* Modrá barva */
-    font-size: 64px;
-}
-
-.text-content h1 {
-    color: white; /* Bílá barva */
-}
-
-/* Typing Animation */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes blink-caret {
-    from,
-    to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: orange;
-    }
-}
-
-.text-content h1 {
-    color: white; /* Bílá barva */
-    font-size: 36px; /* Velikost písma */
-    margin-bottom: 10px; /* Odsazení od dalších elementů */
-}
-
-.home-content h1 span {
-    color: white; /* Modrá barva */
-    font-size: 64px; /* Velikost písma */
-    font-weight: bold; /* Tučné písmo */
-}
-
-.home-content h2 span {
     color: #00ffee;
-    font-size: 90px; /* Velikost písma */
-    font-weight: bold; /* Tučné písmo */
 }
 
-.text-content h2 {
-    color: #00ffee;
-    font-size: 60px; /* Velikost písma */
-    margin-bottom: 10px; /* Odsazení od dalších elementů */
-}
-
-/* Base Styles */
-html {
-    font-size: 62.5%; /* 1rem = 10px */
-    overflow-x: hidden;
-}
-
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.wrapper {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* poloprůhledné černé pozadí */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-.contact-form {
-    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.contact-form h2 {
-    color: #00ffee;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
-
-.contact-form form {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    max-width: 400px;
-    margin: 0 auto;
-    text-align: left; /* Zarovnání textu doleva */
-}
-
-.contact-form label {
-    color: #00ffee;
-    display: block;
-    margin-bottom: 5px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #333; /* tmavé pozadí pro input a textarea */
-    color: #fff; /* bílá barva textu */
-}
-
-.contact-form button {
-    background-color: #00ffee;
-    color: white;
-    border: none;
-    padding: 20px 50px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.contact-form button:hover {
-    background-color: #0099cc;
-}
-
-.contact-info {
-    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-.contact-info h2 {
-    color: #00ffee;
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.social-links a {
-    font-size: 2em;
-    margin: 0 10px;
-    color: #00ffee;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: rgb(0, 0, 0);
-}
-
-@keyframes glowing {
-    0% { text-shadow: 0 0 50px rgba(0, 255, 238, 0.8); }
-    50% { text-shadow: 0 0 80px rgba(0, 255, 238, 0.9); }
-    100% { text-shadow: 0 0 50px rgba(0, 255, 238, 0.8); }
-}
+/* Projects Section */
 .projects {
     width: 100%;
     padding: 40px 0;
-    background-color:#000000;
+    background-color: #000000;
 }
 
 .projects-heading {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
+    color: #ff6600;
 }
 
 .projects-grid {
@@ -459,16 +264,11 @@ body {
 }
 
 .project-card {
-    background-color: rgb(0, 0, 0);
+    background-color: #000000;
     padding: 20px;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.button-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px;
 }
 
 .project-title {
@@ -482,27 +282,24 @@ body {
     margin-bottom: 10px;
 }
 
-.project-description img{
+.project-description img {
     width: 100%;
     height: auto;
     display: block;
     margin-top: 20px;
 }
+
 .project-image {
     width: 100%;
     height: auto;
     border-radius: 4px;
 }
 
-.button-container {
-    margin-top: 20px;
-}
-
 .project-link {
     display: inline-block;
     padding: 10px 20px;
     background-color: #00ffee;
-    color:rgb(0, 0, 0);
+    color: #000000;
     text-decoration: none;
     margin-right: 10px;
     margin-bottom: 10px;
@@ -513,10 +310,10 @@ body {
     background-color: #00ffee;
 }
 
-
 .button-container {
-    margin-top: 15px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
 }
 
 .button-container .button {
@@ -526,11 +323,11 @@ body {
 
 .button-container .button a {
     text-decoration: none;
-    color: #fff;
-    background-color: #000; /* Černá barva pro tlačítka */
-    padding: 12px 24px; /* Zvětšení paddingu pro lepší klikatelnost */
+    color: white;
+    background-color: #000000;
+    padding: 12px 24px;
     border-radius: 5px;
-    border: 2px solid #000; /* Černé ohraničení */
+    border: 2px solid #000000;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -538,137 +335,76 @@ body {
     background-color: #000000;
 }
 
-/* Media queries pro responzivní design */
-@media (max-width: 1024px) {
-    .projects__card {
-        width: 90%; /* Změna šířky karty na 90% šířky kontejneru na menších obrazovkách */
-    }
-}
-
-@media (max-width: 768px) {
-    .projects {
-        padding: 50px 0; /* Menší padding pro mobilní zařízení */
-    }
-
-    .projects__card {
-        width: 100%; /* Na mobilních zařízeních šířka karty 100% */
-    }
-}
-
-/* Obecné styly pro stránku */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-color: black; /* Černé pozadí */
-    color: white; /* Bílý text */
-}
-
-/* Styly pro sekci skills */
+/* Skills Section */
 .skills {
-    padding: 50px 0; /* Vnitřní odsazení */
+    padding: 50px 0;
     text-align: center;
-    width: 100%; /* Šířka přes celou stránku */
-    box-sizing: border-box; /* Včetně paddingu do šířky */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .skills h2 {
-    color: #00ffee; /* Zářivě modrá barva pro nadpis Skills */
+    color: #00ffee;
     font-size: 2.5em;
     margin-bottom: 40px;
 }
 
 .container {
-    width: 100%; /* Šířka přes celou stránku */
-    margin: 0 auto; /* Zarovnání na střed */
-    padding: 0 20px; /* Vnější odsazení */
-    box-sizing: border-box; /* Včetně paddingu do šířky */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .skills-category {
-    margin-bottom: 50px; /* Mezera mezi kategoriemi dovedností */
+    margin-bottom: 50px;
 }
 
 .skills-category h3 {
-    color: #00ffee; /* Zářivě modrá barva pro nadpisy kategorií */
+    color: #00ffee;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 .skills-list {
-    display: flex; /* Rozložení dovedností do řady */
-    flex-wrap: wrap; /* Přerušení dovedností na více řádcích, pokud je potřeba */
-    justify-content: space-around; /* Zarovnání dovedností s rovnoměrným rozestupem */
-    gap: 20px; /* Mezera mezi jednotlivými dovednostmi */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .skill {
-    flex: 1 1 calc(33.333% - 40px); /* Dovednost má flexibilní šířku na základě obsahu */
-    max-width: calc(33.333% - 40px); /* Maximální šířka dovednosti */
-    padding: 20px; /* Vnitřní odsazení dovednosti */
-    background-color: #00ffee; /* Tmavě šedá barva pozadí dovednosti */
-    text-align: center; /* Zarovnání textu na střed */
-    border-radius: 10px; /* Zaoblené rohy */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Přidání stínu */
-    transition: transform 0.3s, box-shadow 0.3s; /* Animace při přejetí myší */
-    box-sizing: border-box; /* Včetně paddingu do šířky */
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
+    padding: 20px;
+    background-color: #00ffee;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
 }
 
 .skill:hover {
-    transform: translateY(-10px); /* Posunutí nahoru při přejetí myší */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Zvýraznění stínu při přejetí myší */
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .skill img {
-    max-width: 50px; /* Maximální šířka ikony */
-    margin-bottom: 10px; /* Mezera pod ikonou */
+    max-width: 50px;
+    margin-bottom: 10px;
 }
 
-.skill h4 {
-    margin: 0;
-    font-size: 1.2em;
-    color:rgb(0, 0, 0); /* Zářivě modrá barva pro názvy dovedností */
-}
-
-/* Responzivní design */
-@media (max-width: 768px) {
-    .skill {
-        flex: 1 1 calc(50% - 20px); /* Flexibilní šířka na menších obrazovkách */
-        max-width: calc(50% - 20px); /* Maximální šířka dovednosti */
-    }
-}
-
-@media (max-width: 480px) {
-    .skill {
-        flex: 1 1 100%; /* Flexibilní šířka na velmi malých obrazovkách */
-        max-width: 100%; /* Maximální šířka dovednosti */
-    }
-}
-
-/* Responzivní design */
-@media (max-width: 768px) {
-    .skills-list {
-        flex-direction: column;
-        align-items: center;
-    }
+.skills-section h4 {
+    font-size: 1.5em; /* Velikost písma */
+    color: #ff6600; /* Barva textu */
+    margin-bottom: 10px; /* Odstup dolů */
 }
 
 
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    color: #000000;
-    background-color: #000000;
-    margin: 0;
-    padding: 0;
-}
-
-/* About Me Section */
 .about-me {
     background-color: #000000;
     padding: 50px 0;
-    
 }
 
 .about-me-content {
@@ -679,6 +415,10 @@ body {
 
 .about-me-description, .about-me-work-education {
     margin-bottom: 30px;
+}
+
+.about-me-section {
+    margin-bottom: 40px;
 }
 
 h2 {
@@ -698,10 +438,6 @@ p {
     font-size: 1.1em;
     line-height: 1.8;
     margin-bottom: 20px;
-}
-
-.about-me-section {
-    margin-bottom: 40px;
 }
 
 ul {
@@ -795,6 +531,7 @@ strong {
 .projects-header::after {
     background: #ff6600; /* Matching color for the line under the Projects header */
 }
+
 /* Úpravy pro mobilní zařízení */
 @media (max-width: 768px) {
     .wrapper {
@@ -841,6 +578,7 @@ strong {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 }
+
 @media (max-width: 768px) {
     .project-image {
         width: 40%; /* Přizpůsobit velikost podle vašich potřeb */
@@ -848,3 +586,100 @@ strong {
         margin: 0 0 10px 10px; /* Přizpůsobit okrajům podle vašich potřeb */
     }
 }
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #000000;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media queries pro responzivní design */
+@media (max-width: 1024px) {
+    .projects__card {
+        width: 90%; /* Změna šířky karty na 90% šířky kontejneru na menších obrazovkách */
+    }
+}
+
+@media (max-width: 768px) {
+    .projects {
+        padding: 50px 0; /* Menší padding pro mobilní zařízení */
+    }
+
+    .projects__card {
+        width: 100%; /* Na mobilních zařízeních šířka karty 100% */
+    }
+}
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    
+    .contact-form h2 {
+    color: #00ffee;
+    font-size: 28px;
+    margin-bottom: 20px;
+    }
+    
+    .contact-form form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left; /* Zarovnání textu doleva */
+    }
+    
+    .contact-form label {
+    color: #00ffee;
+    display: block;
+    margin-bottom: 5px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #333; /* tmavé pozadí pro input a textarea /
+    color: #fff; / bílá barva textu */
+    }
+    
+    .contact-form button {
+    background-color: #00ffee;
+    color: white;
+    border: none;
+    padding: 20px 50px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    }
+    
+    .contact-form button
+    {
+    background-color: #0099cc;
+    }
+    
+    .contact-info {
+    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    }
+    
+    .contact-info h2 {
+    color: #00ffee;
+    font-size: 28px;
+    margin-bottom: 10px;
+    }
