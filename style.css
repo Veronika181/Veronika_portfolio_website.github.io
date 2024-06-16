@@ -6,6 +6,7 @@ body, html {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    text-align: center;
 }
 
 .wrapper {
@@ -27,7 +28,7 @@ header {
 }
 
 .header .logo {
-    font-size: 36px;
+    font-size: 30px;
     color: white;
     text-decoration: none;
 }
@@ -114,7 +115,7 @@ header {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
@@ -163,32 +164,40 @@ header {
 
 .home-content {
     flex: 1;
+    text-align: center;
 }
 
 .home-content h1 {
-    font-size: 48px;
+    font-size: 30px;
     color: white;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .home-content h1 span {
     color: white;
+    text-align: center;
 }
 
 .home-content h3 {
-    font-size: 32px;
+    font-size: 30px;
     color: white;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .home-content p {
-    font-size: 24px;
+    font-size: 30px;
     color: white;
     margin-bottom: 30px;
+    text-align: center;
 }
 
-.btn-group {
+.home-content h2 {
+    font-size: 60px;
+    color: #00ffee;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .btn {
@@ -200,6 +209,7 @@ header {
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s;
+    align-items: center;
 }
 
 .btn:hover {
@@ -208,7 +218,7 @@ header {
 
 .social-icons {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center; /* Zarovnání ikon na střed */
     align-items: center;
     margin-top: 30px;
 }
@@ -218,96 +228,136 @@ header {
     margin: 0 20px;
     font-size: 40px;
     transition: color 0.3s;
+    text-align: center; /* Zarovnání textu v odkazu na střed */
+    display: inline-block; /* Nutné pro použití align-items */
 }
 
 .social-icons a:hover {
     color: white;
 }
 
+
 .home-img {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 20px; /* Přidání polštářkového prostoru kolem obrázku */
 }
 
 .home-img img {
     max-width: 100%;
-    height: auto;
+    height: auto; /* Automatická výška pro zachování poměru stran */
     border-radius: 50%;
     box-shadow: 0 0 25px #00ffee;
 }
 
 .home-content .veronika {
     color: #00ffee;
+    text-align: center; /* Zarovnání textu na střed */
+    margin-top: 20px; /* Mezera nad textem */
 }
 
-/* Projects Section */
+
 .projects {
     width: 100%;
     padding: 40px 0;
-    background-color: #000000;
+    background-color: #00ffee;
+    text-align: center; /* Zarovnání obsahu v kontejneru */
 }
 
 .projects-heading {
-    text-align: center;
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #ff6600;
+    color: #00ffee;
 }
 
 .projects-grid {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    padding: 0 20px;
+    padding: 20px;
+}
+
+.project {
+    width: 100%;
+    max-width: 400px;
+    background-color: #00ffee;
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
 }
 
 .project-card {
-    background-color: #000000;
-    padding: 20px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-.project-title {
+.project-image {
+    width: 100%;
+    display: block;
+    border-radius: 10px 10px 0 0;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+    color: rgb(0, 0, 0); /* Barva popisu */
 }
 
 .project-description {
     font-size: 1rem;
     line-height: 1.5;
-    margin-bottom: 10px;
+    color: rgb(0, 0, 0); /* Barva popisu */
 }
 
-.project-description img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 20px;
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
+.button-container {
+    margin-top: 10px;
 }
 
 .project-link {
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #00ffee;
-    color: #000000;
-    text-decoration: none;
     margin-right: 10px;
     margin-bottom: 10px;
-    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .project-link:hover {
-    background-color: #00ffee;
+    background-color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+/* Media query for responsive design */
+@media screen and (max-width: 768px) {
+    .projects-content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-info {
+        order: -1; /* Place project info above the image */
+    }
+
+    .project-image {
+        border-radius: 0 0 10px 10px;
+    }
 }
 
 .button-container {
@@ -397,7 +447,7 @@ header {
 
 .skills-section h4 {
     font-size: 1.5em; /* Velikost písma */
-    color: #ff6600; /* Barva textu */
+    color: #00ffee; /* Barva textu */
     margin-bottom: 10px; /* Odstup dolů */
 }
 
@@ -514,7 +564,7 @@ strong {
 }
 
 .projects-header {
-    color: #ff6600; /* Vibrant color for the Projects header */
+    color: #00ffee; /* Vibrant color for the Projects header */
     font-size: 3rem; /* Larger font size for Projects header */
 }
 
@@ -529,7 +579,7 @@ strong {
 }
 
 .projects-header::after {
-    background: #ff6600; /* Matching color for the line under the Projects header */
+    background: #00ffee; /* Matching color for the line under the Projects header */
 }
 
 /* Úpravy pro mobilní zařízení */
@@ -633,7 +683,7 @@ body {
     gap: 10px;
     max-width: 400px;
     margin: 0 auto;
-    text-align: left; /* Zarovnání textu doleva */
+    text-align: center; /* Zarovnání textu doleva */
     }
     
     .contact-form label {
@@ -651,35 +701,88 @@ body {
     border-radius: 5px;
     background-color: #333; /* tmavé pozadí pro input a textarea /
     color: #fff; / bílá barva textu */
-    }
-    
-    .contact-form button {
-    background-color: #00ffee;
-    color: white;
-    border: none;
-    padding: 20px 50px;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-    }
-    
-    .contact-form button
-    {
-    background-color: #0099cc;
-    }
-    
-    .contact-info {
-    background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-top: auto;
     text-align: center;
     }
     
-    .contact-info h2 {
-    color: #00ffee;
-    font-size: 28px;
-    margin-bottom: 10px;
+    .contact-form {
+        background-color: rgba(0, 0, 0, 0.8); /* tmavé černé pozadí */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin-bottom: 20px;
     }
+    
+    .contact-form h2 {
+        color: #00ffee;
+        font-size: 28px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    
+    .contact-form form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    .contact-form label {
+        color: #00ffee;
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #333; /* tmavé pozadí pro input a textarea */
+        color: #fff; /* bílá barva textu */
+    }
+    
+    .contact-form button {
+        background-color: #00ffee;
+        color: #000; /* černá barva textu */
+        border: none;
+        padding: 10px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    
+    .contact-form button:hover {
+        background-color: #00ffee;
+        text-align: center;
+    }
+    
+    /* Zarovnání Submit button */
+    .contact-form .submit-button {
+        justify-self: center; /* Zarovnání na střed */
+    }
+    /* CSS */
+.portfolio-list {
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-list li {
+    margin-bottom: 20px;
+}
+
+.portfolio-list img {
+    max-width: 100%; /* Maximum width of the image is 100% of its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure images behave as block elements */
+    margin: 0 auto; /* Center align images within their container */
+}
+
+
+    

@@ -1,8 +1,18 @@
+// JavaScript kód pro zavírání sloupce (hamburger menu)
+document.addEventListener("DOMContentLoaded", function() {
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebarButton = document.getElementById('close-sidebar');
 
+    // Kliknutí na křížek
+    closeSidebarButton.addEventListener('click', function() {
+        sidebar.classList.remove('show');
+    });
+
+    // Kliknutí na odkaz v navigačním menu
     document.querySelectorAll('.sidebar-list a').forEach(function(link) {
         link.addEventListener('click', function(e) {
             sidebar.classList.remove('show');
-            e.preventDefault(); // Prevent default behavior of anchor link
+            e.preventDefault(); // Zabraňte výchozímu chování odkazu kotvy
             var targetId = this.getAttribute('href').substring(1);
             var targetElement = document.getElementById(targetId);
             if (targetElement) {
@@ -13,9 +23,7 @@
         });
     });
 
-   
-
-    // Smooth scrolling for all anchor links
+    // Hladké posouvání pro všechny kotvové odkazy
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -28,13 +36,8 @@
             }
         });
     });
-});
 
-
-
-var typedInstance = null;
-
-document.addEventListener("DOMContentLoaded", function() {
+    // Odeslání formuláře kontaktu
     const contactForm = document.getElementById('contact-form');
     const contactMessage = document.getElementById('contact-message');
 

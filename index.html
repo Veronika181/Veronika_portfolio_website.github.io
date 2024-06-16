@@ -24,14 +24,14 @@
         </nav>
         <nav class="sidebar">
             <ul class="sidebar-list">
-                <li onclick="toggleSidebar()"><a href="#"><i class="fas fa-times"></i></a></li>
+                <li class="close-sidebar"><a href="#"><i class="fas fa-times"></i></a></li>
                 <li><a href="#home" class="active">Home</a></li>
                 <li><a href="#about-me">About Me</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+        </nav>        
     </header>
 
     <section class="home" id="home">
@@ -42,16 +42,18 @@
                 <h3 class="text-animation"></h3>
                 <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
                 <div class="btn-group">
-                    <a href="resume.pdf" download="Veronika_Obrtelova_CV_EN.pdf" class="btn btn-small">Download CV</a>
+                    <a href="VeronikaObrtelovaCV.pdf" download="VeronikaObrtelovaCV.pdf" class="btn btn-small">Download CV</a>
                     <a href="#contact" class="btn btn-small" onclick="openContact()">Contact</a>
                 </div>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/veronika-obrtelova" class="linkedin"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin"><i class="fab fa-linkedin"></i></a>
                     <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
                     <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail"><i class="far fa-envelope"></i></a>
                 </div>
             </div>
+        <div></div>
             <div class="home-img">
+                <div></div>
                 <img src="Portfolio/images/img.jpeg" alt="Veronika Obrtelova">
             </div>
         </div>
@@ -59,13 +61,7 @@
 
     <section class="about-me" id="about-me">
         <div class="about-me-content">
-            <div class="about-me-description">
                 <h2>About Me</h2>
-                <div class="blue-line"></div>
-                <p>Junior tester with a passion for test automation. Experienced in manual and automated testing, focusing on delivering high-quality software. Eager to contribute to project success through continuous learning and application of testing best practices.</p>
-            </div>
-            <div class="about-me-work-education">
-                <div class="about-me-section">
                     <h2>Work Experience</h2>
                     <div class="blue-line"></div>
                     <ul>
@@ -81,19 +77,24 @@
                     <h2>Education</h2>
                     <div class="blue-line"></div>
                     <ul>
-                        <li>
-                            <h3>Testing - Digital Academy</h3>
-                            <p>Institution: Czechitas</p>
-                            <p>Date: 14/03/2023 - 26/06/2023</p>
-                            <p>Course included: Manual and Automated Testing, Test Design, Version Control with GIT, API Testing, Web Testing with Selenium WebDriver.</p>
-                        </li>
-                        <li>
-                            <h3>Basics of Python Programming</h3>
-                            <p>Institution: Pyladies</p>
-                            <p>Date: 12/10/2022 - 1/02/2023</p>
-                            <p>Course included: Conditions and Functions, Loops, String, Errors and Modules, Interfaces and Tests, Lists and Tuples, Sequences and Files, Dictionaries, Classes and Inheritance, Graphics</p>
-                        </li>
-                    </ul>
+                        <ul class="portfolio-list">
+                            <li>
+                                <h3>Testing - Digital Academy</h3>
+                                <p>Institution: Czechitas</p> 
+                                <p>Date: 14/03/2023 - 26/06/2023</p>
+                                <p>Course included: Manual and Automated Testing, Test Design, Version Control with GIT, API Testing, Web Testing with Selenium WebDriver.</p>
+                                <img src="Portfolio/images/14705667_1249377641760791_7395493269920326081_n.png" alt="Czechitas Icon">
+                            </li>
+                        </ul>
+                        <ul class="portfolio-list">
+                            <li>
+                                <h3>Basics of Python Programming</h3>
+                                 <p>Institution: Pyladies</p>
+                                <p>Date: 12/10/2022 - 1/02/2023</p>
+                                <p>Course included: Conditions and Functions, Loops, String, Errors and Modules, Interfaces and Tests, Lists and Tuples, Sequences and Files, Dictionaries, Classes and Inheritance, Graphics</p>
+                                <img src="Portfolio/images/png-transparent-pyladies-python-conference-python-software-foundation-flask-pyladies-text-logo-fictional-character.png" alt="Pyladies Icon">
+                            </li>
+                        </ul>
                 </div>
             </div>
         </div>
@@ -149,46 +150,62 @@
                             <img src="Portfolio/images/jira.png" alt="Jira Icon">
                             <h4>Jira</h4>
                         </div>
+                        <div class="skill">
+                            <img src="Portfolio/images/sql-2.png" alt="SQL Icon">
+                            <h4>SQL</h4>
+                        </div>
+                        <div class="skill">
+                            <img src="Portfolio/images/elastic-kibana-logo.png" alt="Kibana Icon">
+                            <h4>Kibana</h4>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <section class="projects" id="projects">
-        <h2 class="projects-heading">Projects</h2>
-
-        <div class="projects-grid">
-            <div class="project-card">
-                <a href="https://veronika-to-do-list.netlify.app/" target="_blank" class="project-link">
-                    <p class="project-description">
-                        To do list
-                        This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.
-                    </p>
-                    <img src="Portfolio/images/To do list.png" alt="To Do List project" class="project-image">
-                </a>
-                <div class="button-container">
-                    <a href="https://veronika-to-do-list.netlify.app/" class="project-link">Visit Website</a>
-                    <a href="https://github.com/Veronika181/To-Do-List" class="project-link">View Code</a>
+    <div class="projects-grid">
+        <div class="projects-content">
+            <h2>Projects</h2>
+    
+            <div class="project">
+                <div class="project-card">
+                    <a href="https://veronika-to-do-list.netlify.app/" target="_blank" class="project-image-container">
+                        <img src="Portfolio/images/To do list.png" alt="To Do List project" class="project-image">
+                    </a>
+                    <div class="project-info">
+                        <h2>To do list</h2>
+                        <p class="project-description">
+                            This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.
+                        </p>
+                        <div class="button-container">
+                            <a href="https://veronika-to-do-list.netlify.app/" class="project-link">Visit Website</a>
+                            <a href="https://github.com/Veronika181/To-Do-List" class="project-link">View Code</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div class="project-card">
+    
+            <div class="project">
                 <div class="project-card">
-                    <a href="https://veronika-javascript-slider.netlify.app/" target="_blank" class="project-link"></a>
-                    <p class="project-description">
-                    JavaScript slider
-                    This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.
-                </p>
-                <img src="Portfolio/images/Javascript slider.png" alt="JavaScript Slider project" class="project-image">
-            </a>
-            <div class="button-container">
-                <a href="https://veronika-javascript-slider.netlify.app/" class="project-link">Visit Website</a>
-                <a href="https://github.com/Veronika181/Javascript-Slider" class="project-link">View Code</a>
+                    <a href="https://veronika-javascript-slider.netlify.app/" target="_blank" class="project-image-container">
+                        <img src="Portfolio/images/Javascript slider.png" alt="JavaScript Slider project" class="project-image">
+                    </a>
+                    <div class="project-info">
+                        <h2>JavaScript slider</h2>
+                        <p class="project-description">
+                            This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.
+                        </p>
+                        <div class="button-container">
+                            <a href="https://veronika-javascript-slider.netlify.app/" class="project-link">Visit Website</a>
+                            <a href="https://github.com/Veronika181/Javascript-Slider" class="project-link">View Code</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+    
         </div>
     </div>
-</section>
+    
 
 <section class="contact" id="contact">
     <h2>Contact me</h2>
@@ -201,7 +218,8 @@
                 <input type="email" id="email" name="email" required>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="4" required></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit" class="submit-button">Submit</button>
+
             </form>
             <p id="contact-message"></p>
         </div>
