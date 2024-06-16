@@ -841,3 +841,10 @@ strong {
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
     }
 }
+@media (max-width: 768px) {
+    .project-image {
+        width: 40%; /* Přizpůsobit velikost podle vašich potřeb */
+        float: right; /* Zarovnání doprava */
+        margin: 0 0 10px 10px; /* Přizpůsobit okrajům podle vašich potřeb */
+    }
+}
