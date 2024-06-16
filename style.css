@@ -359,7 +359,32 @@ header {
         border-radius: 0 0 10px 10px;
     }
 }
+@media screen and (min-width: 768px) {
+    .projects-content {
+        display: flex;
+        flex-direction: grid;
+        gap: 20px;
+        justify-content: flex-start;
+    }
 
+    .project {
+        width: 100%;
+        
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .project-info {
+        order: -1; 
+    }
+
+    .project-image {
+        border-radius: 0 0 10px 10px;
+    }
+}
 .button-container {
     display: flex;
     justify-content: space-around;
