@@ -278,13 +278,13 @@ header {
 
 .home-content h2 span {
     color: #00ffee;
-    font-size: 64px; /* Velikost písma */
+    font-size: 90px; /* Velikost písma */
     font-weight: bold; /* Tučné písmo */
 }
 
 .text-content h2 {
     color: #00ffee;
-    font-size: 36px; /* Velikost písma */
+    font-size: 60px; /* Velikost písma */
     margin-bottom: 10px; /* Odsazení od dalších elementů */
 }
 
