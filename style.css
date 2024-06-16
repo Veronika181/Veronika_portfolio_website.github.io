@@ -6,6 +6,7 @@ body {
     box-sizing: none;
     background-color: #000; /* Černé pozadí */
     color: rgb(0, 0, 0); /* Bílá barva textu */
+    overflow: hidden;
 }
 
 header {
@@ -50,7 +51,7 @@ header {
 .navbar-list a {
         color: rgb(0, 0, 0); 
         text-decoration: none;
-        font-size: 24px; /* Zvětšení písma */
+        font-size: 24px; 
 }
     
 
@@ -59,6 +60,41 @@ header {
     color: #000000;
 }
 
+@media (max-width: 800px) {
+    .menu-button {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 200px;
+        height: 100%;
+        background-color: #000000;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .navbar.show {
+        transform: translateX(0);
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .navbar-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar-list li {
+        margin: 10px 0;
+    }
+}
 .sidebar {
     position: fixed;
     top: 0;
@@ -758,4 +794,50 @@ strong {
 
 .projects-header::after {
     background: #ff6600; /* Matching color for the line under the Projects header */
+}
+/* Úpravy pro mobilní zařízení */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    .projects {
+        padding: 30px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-button {
+        font-size: 24px;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .navbar-list a {
+        font-size: 16px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
 }
