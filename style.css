@@ -810,4 +810,44 @@ body {
 }
 
 
-    
+.about-me-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-content h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.blue-line {
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    margin-bottom: 30px;
+}
+
+.job-entry {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-left: 5px solid #3498db;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.job-entry h3 {
+    margin-top: 0;
+    color: #2980b9;
+}
+
+.job-entry p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+   
