@@ -58,5 +58,25 @@ window.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('light-mode');
   }
 });
+// EmailJS odeslání formuláře
+document.addEventListener('DOMContentLoaded', function () {
+  emailjs.init('YOUR_PUBLIC_KEY'); // Získáš v EmailJS dashboardu
+
+  const form = document.getElementById('contact-form');
+  const status = document.getElementById('form-status');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(() => {
+        status.textContent = '✅ Message sent successfully!';
+        form.reset();
+      }, (error) => {
+        status.textContent = '❌ Failed to send message. Please try again.';
+        console.error('EmailJS error:', error);
+      });
+  });
+});
 
 
