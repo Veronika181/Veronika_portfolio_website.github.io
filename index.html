@@ -6,13 +6,7 @@
   <title>Veronika Ondrušová – QA Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
   <header class="header">
@@ -60,8 +54,8 @@
         <h3 class="text-animation">QA Engineer</h3>
         <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
         <div class="btn-group">
-          <a href="Veronika Obrtelova.cv.pdf" download class="btn btn-small">Download CV</a>
-          <a href="#contact" class="btn btn-small" onclick="openContact()">Contact</a>
+          <a href="Veronika_Ondrusova_CV.pdf" download class="btn btn-small">🚀 Download CV</a>
+          <a href="#contact" class="btn btn-small" onclick="openContact()">📬 Contact</a>
         </div>
         <div class="social-icons">
           <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin"><i class="fab fa-linkedin"></i></a>
@@ -70,7 +64,7 @@
         </div>
       </div>
       <div class="home-img">
-        <img src="Portfolio/images/myphoto.jpeg" alt="Veronika Obrtelova" />
+        <img src="images/myphoto.jpeg" alt="Veronika Ondrušová" />
       </div>
     </div>
   </section>
@@ -78,13 +72,15 @@
   <section class="about-me" id="about-me">
     <div class="about-me-content">
       <h2>About Me</h2>
-      <div class="blue-line"></div>
+      <p>
+        With a background in manual and automated testing, I’ve worked on web applications for government and fintech sectors.
+        I thrive in agile teams, love collaborating with developers and analysts, and enjoy turning edge cases into test cases.
+      </p>
 
       <h2>Work Experience</h2>
-
       <div class="job-entry">
         <h3>02 IT Services s.r.o.</h3>
-        <p><strong>Duration:</strong> November 15, 2024 – Present</p>
+        <p><strong>Duration:</strong> November 2024 – Present</p>
         <p><strong>Role:</strong> QA Tester for a web application developed for the Ministry of Agriculture.</p>
         <p><strong>Responsibilities:</strong> Functional testing, bug reporting, collaboration with developers and analysts.</p>
         <p><strong>Tech Stack:</strong> JIRA, Confluence, Postman, Jenkins, SQL Developer</p>
@@ -92,390 +88,60 @@
 
       <div class="job-entry">
         <h3>Creditas Digital Factory s.r.o.</h3>
-        <p><strong>Duration:</strong> December 1, 2023 – February 29, 2024</p>
+        <p><strong>Duration:</strong> December 2023 – February 2024</p>
         <p><strong>Role:</strong> Manual QA Tester</p>
         <p><strong>Responsibilities:</strong> Manual and regression testing, bug reporting, team collaboration.</p>
         <p><strong>Tech Stack:</strong> JIRA, Confluence, Kibana, JMeter</p>
       </div>
     </div>
   </section>
-</body>
-</html>
 
-            </ul>
+  <section class="skills" id="skills">
+    <div class="skills-content">
+      <h2>Skills & Tools</h2>
+      <div class="skills-grid">
+        <div class="tech-card"><img src="images/postman.png" alt="Postman" /><span>Postman</span></div>
+        <div class="tech-card"><img src="images/selenium.png" alt="Selenium" /><span>Selenium</span></div>
+        <div class="tech-card"><img src="images/jira.png" alt="JIRA" /><span>JIRA</span></div>
+        <div class="tech-card"><img src="images/git.png" alt="Git" /><span>Git</span></div>
+        <div class="tech-card"><img src="images/html.png" alt="HTML" /><span>HTML</span></div>
+        <div class="tech-card"><img src="images/css.png" alt="CSS" /><span>CSS</span></div>
+        <div class="tech-card"><img src="images/javascript.svg" alt="JavaScript" /><span>JavaScript</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="projects-content">
+      <h2>Projects</h2>
+      <div class="project-board">
+        <div class="ticket">
+          <h4>API Regression Suite</h4>
+          <p>Automated REST API tests with Postman & Newman CLI, integrated into Jenkins pipeline.</p>
+          <span class="tag">Automation</span>
         </div>
-        <div class="about-me-section">
-            <h2>Education</h2>
-            <div class="blue-line"></div>
-            <ul>
-                <ul class="portfolio-list">
-                    <li>
-                        <h3>Testing - Digital Academy</h3>
-                        <p>Institution: Czechitas</p> 
-                        <p>Date: 14/03/2023 - 26/06/2023</p>
-                        <p>Course included: Manual and Automated Testing, Test Design, Version Control with GIT, API Testing, Web Testing with Selenium WebDriver.</p>
-                        <img src="Portfolio/images/czechitas.png" alt="Czechitas Icon">
-                    </li>
-                </ul>
-                <ul class="portfolio-list">
-                    <li>
-                        <h3>Basics of Python Programming</h3>
-                         <p>Institution: Pyladies</p>
-                        <p>Date: 12/10/2022 - 1/02/2023</p>
-                        <p>Course included: Conditions and Functions, Loops, String, Errors and Modules, Interfaces and Tests, Lists and Tuples, Sequences and Files, Dictionaries, Classes and Inheritance, Graphics</p>
-                        <img src="Portfolio/images/pyladies.png" alt="Pyladies Icon">
-                    </li>
-                </ul>
-            </ul>
+        <div class="ticket">
+          <h4>Selenium UI Framework</h4>
+          <p>Modular test framework with page objects, reporting, and CI/CD integration.</p>
+          <span class="tag">UI Testing</span>
         </div>
-    </section>
-
-    <section class="skills" id="skills">
-        <div class="skills-content">
-            <div class="container">
-                <h2>Skills</h2>
-                <div class="skills-category">
-                    <h3>Frontend Development</h3>
-                    <div class="skills-list">
-                        <div class="skill">
-                            <img src="Portfolio/images/html.png" alt="HTML Icon">
-                            <h4>HTML</h4>
-                        </div>
-                        <div class="skill">
-                            <img src="Portfolio/images/css.png" alt="CSS Icon">
-                            <h4>CSS</h4>
-                        </div>
-                        <div class="skill">
-                            <img src="Portfolio/images/javascript.svg" alt="JavaScript Icon">
-                            <h4>JavaScript</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Backend Development</h3>
-                    <div class="skills-list">
-                        <div class="skill">
-                            <img src="Portfolio/images/python.png" alt="Python Icon">
-                            <h4>Python</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Testing</h3>
-                    <div class="skills-list">
-                        <div class="skill">
-                            <img src="Portfolio/images/automated testing.png" alt="Selenium Icon">
-                            <h4>Automated Testing (Selenium)</h4>
-                        </div>
-                        <div class="skill">
-                            <img src="Portfolio/images/manual testing.png" alt="Manual Testing Icon">
-                            <h4>Manual Testing</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="skills-category">
-                    <h3>Other Skills</h3>
-                    <div class="skills-list">
-                        <div class="skill">
-                            <img src="Portfolio/images/github.png" alt="Git Icon">
-                            <h4>GitHub</h4>
-                        </div>
-                        <div class="skill">
-                            <img src="Portfolio/images/jira.png" alt="Jira Icon">
-                            <h4>Jira</h4>
-                        </div>
-                        <div class="skill">
-                            <img src="Portfolio/images/sql.png" alt="SQL Icon">
-                            <h4>SQL</h4>
-                        </div>
-                        <div class="skill">
-                            <img src="Portfolio/images/kibana.png" alt="Kibana Icon">
-                            <h4>Kibana</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="ticket">
+          <h4>SQL Data Validator</h4>
+          <p>SQL-based test scripts for validating data integrity across environments.</p>
+          <span class="tag">Data QA</span>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-    
-                <!-- Project 1 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>To Do List</h2>
-                            <img src="Portfolio/images/Todolist.png" alt="To do list Screenshot" class="project-image">
-
-                            <p class="project-description">
-                                This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://veronika-to-do-list.netlify.app/" class="project-link">Visit Website</a>
-                                <a href="https://github.com/Veronika181/To-Do-List" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Project 2 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>JavaScript Slider</h2>
-                            <img src="Portfolio/images/Javascriptslider.png" alt="Javascript slider Screenshot" class="project-image">
-
-                            <p class="project-description">
-                                This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://veronika-javascript-slider.netlify.app/" class="project-link">Visit Website</a>
-                                <a href="https://github.com/Veronika181/Javascript-Slider" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Project 3 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>Calorie Calculator</h2>
-                            <img src="Portfolio/images/Caloriecalculator.png" alt="Calorie Calculator Screenshot" class="project-image">
-
-                            <p class="project-description">
-                                In this project, I've developed a calorie calculator application designed to estimate daily calorie needs based on user input. The app calculates the number of calories needed per day to maintain, lose, or gain weight based on factors such as age, gender, weight, height, and activity level.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://veronikacaloriecalculator.netlify.app/code/html/input.html" class="project-link">Visit Website</a>
-                                <a href="https://github.com/Veronika181/--Calorie-calculator-app--" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-         
-                <!-- Project 4 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>Weather app</h2>
-                            <img src="Portfolio/images/weather.png" alt="Asteroids" class="project-image">
-                            
-                            <p class="project-description">
-                            Weather App Using HTML, CSS, and JavaScript. In this project, I've developed a weather application designed to provide current weather information for any city worldwide. Leveraging HTML, CSS, and JavaScript, the app fetches real-time meteorological data from the OpenWeatherMap API and displays key weather metrics such as temperature, humidity, and wind speed.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://veronikaweatherapp.netlify.app/" class="project-link">Visit Website</a>
-                                <a href="https://github.com/Veronika181/Weather-app" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>Pyladies project asteroids</h2>
-                            <img src="Portfolio/images/asteroids.png" alt="asteroids Screenshot" class="project-image">
-                        
-                            <p class="project-description">
-                            As part of the Pyladies course, I created a game where a rocket is controlled using arrow keys and shoots lasers at asteroids. The game currently consists of a simple game loop in which the rocket responds to player inputs and attempts to shoot down the asteroids.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://github.com/Veronika181/pyladies" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-                <!-- Project 6 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>Testing - Selenium, Python (e-dalnice.cz)</h2>
-                            <img src="Portfolio/images/edalnice.png" alt="edalnice Screenshot" class="project-image">
-                        
-                            <p class="project-description">
-                            I have implemented a Selenium IDE Test Automation Project for the e-dalnice website. In this project, I created automated tests specifically designed for the e-dalnice platform. The tests I developed simulate essential functionalities, such as purchasing a new highway vignette and verifying form validations. This project demonstrates the capabilities and flexibility of using Selenium IDE in Python for test automation.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://github.com/Veronika181/AutomationTesting_OwnProject" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
-
-                <!-- Project 7 -->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>API Postman</h2>
-                            <img src="Portfolio/images/postman.png" alt="Postman" class="project-image">
-
-                            <p class="project-description">
-                            The API Project in Postman focuses on testing and efficiently managing API interfaces using the Postman platform. The project aims to enable testing of scenarios, control, and monitoring of API endpoints with an emphasis on clarity and easy management.
-                            </p>
-                            <div class="button-container">
-                            <a href="https://veronikaapipostman.netlify.app" class="project-link">Visit Website</a>
-                            <a href="https://github.com/Veronika181/API-Postman" class="project-link">View Code</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-                <!-- Project 8-->
-                <div class="project">
-                    <div class="project-card">
-                        <div class="project-info">
-                            <h2>Testing (Selenium + Python)</h2>
-                            <img src="Portfolio/images/seleniumpython.png" alt="seleniumpython" class="project-image">
-                            <p class="project-description">
-                            In this course, I learned:
-                            Selenium Automation with Python: Implemented test automation using Selenium WebDriver and Python, including creating and managing testing frameworks.
-                            <div class="button-container">
-                    
-                            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" class="project-link">View Code 1</a>
-                            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" class="project-link">View Code 2</a>
-                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Project 9 -->
-            <div class="project">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h2>Password generator</h2>
-                        <img src="Portfolio/images/passwordgenerator.png" alt="Postman" class="project-image">
-
-                        <p class="project-description">
-                        This Python script generates random passwords of variable lengths based on user input. It utilizes the random and string modules to select characters from lowercase letters, uppercase letters, digits, and punctuation symbols. Users specify the desired length of the password, and the script then generates and prints the password.
-                        </p>
-                        <div class="button-container">
-                        <a href="https://veronikapasswordgenerator.netlify.app" class="project-link">Visit Website</a>
-                        <a href="https://github.com/Veronika181/Password_generator.py" class="project-link">View Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            <!-- Project 10 -->
-            <div class="project">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h2>Email slicer</h2>
-                        <img src="Portfolio/images/emailslicer.png" alt="Postman" class="project-image">
-
-                        <p class="project-description">
-                        This code snippet prompts the user to input their email address, extracts the username and domain name, and then displays them back to the user.
-                        </p>
-                        <div class="button-container">
-                        <a href="https://veronikaemailslicer.netlify.app/" class="project-link">Visit Website</a>
-                        <a href="https://github.com/Veronika181/Email_slicer.py" class="project-link">View Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-            <!-- Project 11 -->
-            <div class="project">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h2>Python Course</h2>
-                        <img src="Portfolio/images/images.png" alt="Pyladies" class="project-image">
-
-                        <p class="project-description">
-                        Introduction to Python: Basic syntax and data types. Control Structures: If statements, loops, and functions. Data Structures: Lists, tuples, dictionaries, and sets. File Handling: Reading from and writing to files. Exception Handling: Handling errors and exceptions. Functions and Modules: Creating functions and importing modules. Object-Oriented Programming: Classes, objects, inheritance, and polymorphism. Working with Files and Directories: Manipulating files and directories using os and shutil modules. Introduction to Django: Basics of web development with Django.
-                        </p>
-                        <div class="button-container">
-                        <a href="https://github.com/Veronika181/Pyladies_Course" class="project-link">View Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Project 12-->
-            <div class="project">
-                <div class="project-card">
-                    <div class="project-info">
-                        <h2>API Postman</h2>
-                        <img src="Portfolio/images/challenge.png" alt="Postman-challenge" class="project-image">
-
-                        <p class="project-description">
-                        🚀 30 Days of Postman Challenge 🚀 I recently started the 30 Days of Postman challenge, which helps me improve my API testing skills. 
-                        </p>
-                        <div class="button-container">
-                        <a href="https://www.postman.com/postman/30-days-of-postman-for-developers/overview" class="project-link">Visit Website</a>
-                        <a href="https://github.com/Veronika181/Postman-Challenge" class="project-link">View Code</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- Project 13-->
-            <div class="project">
-                 <div class="project-card">
-                    <div class="project-info">
-                        <h2>Testing - Playwright</h2>
-                        <img src="Portfolio/images/playwright.png" alt="playwright" class="project-image">
-
-                        <p class="project-description">
-                         
-                        </p>
-                        <div class="button-container">
-                        <a href="https://github.com/Veronika181/Playwright_project" class="project-link">View code</a>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-
-<p>Looking for a QA engineer who brings precision, passion, and a proactive mindset? Let’s talk!</p>
-<a href="mailto:veronika.obrtelova181@gmail.com" class="btn">Get in Touch</a>
-        
-</section>
-    <section class="contact" id="contact">
-        <h2>Contact me</h2>
-        <div class="container">
-            <div class="contact-form">
-                <form action="https://formspree.io/f/meqyyvwv" method="POST">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
-                <p id="contact-message"></p>
-            </div>
-            <div class="contact-info">
-                <h2>Contact info</h2>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/" target="_blank" class="fab fa-linkedin fa-2x"></a>
-                    <a href="https://github.com/" target="_blank" class="fab fa-github fa-2x"></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-    <script>
-        function toggleSidebar() {
-            document.querySelector('.sidebar').classList.toggle('show');
-        }
-
-        document.querySelectorAll('.sidebar-list a').forEach(function(link) {
-            link.addEventListener('click', function() {
-                document.querySelector('.sidebar').classList.remove('show');
-            });
-        });
-    </script>
+  <section class="contact" id="contact">
+    <div class="contact-content">
+      <h2>Contact</h2>
+      <p>If you'd like to collaborate or just say hi, feel free to reach out!</p>
+      <p><strong>Email:</strong> <a href="mailto:veronika.obrtelova181@gmail.com">veronika.obrtelova181@gmail.com</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/veronika-obrtelová/">veronika-obrtelová</a></p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/veronika181">veronika181</a></p>
+    </div>
+  </section>
 </body>
 </html>

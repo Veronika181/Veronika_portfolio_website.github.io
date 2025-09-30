@@ -1,74 +1,62 @@
-// JavaScript kód pro zavírání sloupce (hamburger menu)
-document.addEventListener("DOMContentLoaded", function() {
-    const sidebar = document.getElementById('sidebar');
-    const closeSidebarButton = document.getElementById('close-sidebar');
-
-    // Kliknutí na křížek
-    closeSidebarButton.addEventListener('click', function() {
-        sidebar.classList.remove('show');
-    });jjjj
-
-    // Kliknutí na odkaz v navigačním menu
-    document.querySelectorAll('.sidebar-list a').forEach(function(link) {
-        link.addEventListener('click', function(e) {
-            sidebar.classList.remove('show');
-            e.preventDefault(); // Zabraňte výchozímu chování odkazu kotvy
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Hladké posouvání pro všechny kotvové odkazy
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            var targetId = this.getAttribute('href').substring(1);
-            var targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Odeslání formuláře kontaktu
-    const contactForm = document.getElementById('contact-form');
-    const contactMessage = document.getElementById('contact-message');
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-        emailjs.sendForm('service_7a8en68', 'template_9cvklkh', '#contact-form', 'vHLZSw0qoz8cN3mB7')
-            .then(() => {
-                contactMessage.textContent = 'Message sent successfully';
-                setTimeout(() => {
-                    contactMessage.textContent = '';
-                }, 5000);
-                contactForm.reset();
-            })
-            .catch((error) => {
-                console.error('Error sending email:', error);
-                contactMessage.textContent = 'Error sending message. Please try again later.';
-            });
-    };
-
-    contactForm.addEventListener('submit', sendEmail);
-});
-
+// === Mobilní menu ===
 function toggleSidebar() {
   document.querySelector('.sidebar').classList.toggle('show');
 }
 
+// === Přepínač světlý/tmavý režim ===
 function toggleTheme() {
   document.body.classList.toggle('light-mode');
+  localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
 }
 
+// === Scroll na kontakt ===
 function openContact() {
-  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+  const contactSection = document.getElementById('contact');
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: 'smooth' });
+  }
 }
+
+// === Zavření sidebaru kliknutím mimo ===
+document.addEventListener('click', function (event) {
+  const sidebar = document.querySelector('.sidebar');
+  const menuButton = document.querySelector('.menu-button');
+  if (
+    sidebar.classList.contains('show') &&
+    !sidebar.contains(event.target) &&
+    !menuButton.contains(event.target)
+  ) {
+    sidebar.classList.remove('show');
+  }
+});
+
+// === Zvýraznění aktivní sekce v navigaci ===
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.navbar-list a, .sidebar-list a');
+
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (window.scrollY >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
+
+// === Načtení preferovaného režimu ===
+window.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'light') {
+    document.body.classList.add('light-mode');
+  }
+});
+
 
