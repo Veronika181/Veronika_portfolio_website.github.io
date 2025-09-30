@@ -59,3 +59,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
     contactForm.addEventListener('submit', sendEmail);
 });
+
+function toggleSidebar() {
+  document.querySelector('.sidebar').classList.toggle('show');
+}
+
+function toggleTheme() {
+  document.body.classList.toggle('light-mode');
+}
+
+function openContact() {
+  document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+}
+

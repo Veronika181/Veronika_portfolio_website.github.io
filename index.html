@@ -1,90 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veronika Ondrušová – QA Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 <body>
-    <header class="header">
-        <h1>Hi, I'm Veronika Ondrušová</h1>
-<h3 class="text-animation">QA Engineer | Automation Enthusiast | Bug Hunter Extraordinaire</h3>
-<p>I specialize in ensuring software quality through meticulous testing, automation, and continuous improvement. With a keen eye for detail and a passion for clean code, I help teams ship reliable products faster.</p>
-        <button class="menu-button" onclick="toggleSidebar()">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav class="navbar hideOnMobile">
-            <ul class="navbar-list">
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <nav class="sidebar">
-            <ul class="sidebar-list">
-                <li class="close-sidebar"><a href="#"><i class="fas fa-times"></i></a></li>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>        
-    </header>
+  <header class="header">
+    <div class="header-top">
+      <h1>Hi, I'm Veronika Ondrušová</h1>
+      <h3 class="text-animation">QA Engineer | Automation Enthusiast | Bug Hunter Extraordinaire</h3>
+      <p>
+        I specialize in ensuring software quality through meticulous testing, automation, and continuous improvement.
+        With a keen eye for detail and a passion for clean code, I help teams ship reliable products faster.
+      </p>
+      <button class="menu-button" onclick="toggleSidebar()">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
 
-    <section class="home" id="home">
-        <div class="home-content">
-            <div class="text-content">
-                <h1>Hi, I'm</h1>
-                <h2>Veronika Ondrušova</h2>
-                <h3 class="text-animation"></h3>
-                <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
-                <div class="btn-group">
-                    <a href="Veronika Obrtelova.cv.pdf" download="Veronika Obrtelova.cv.pdf" class="btn btn-small">Download CV</a>
-                    <a href="#contact" class="btn btn-small" onclick="openContact()">Contact</a>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
-                    <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail"><i class="far fa-envelope"></i></a>
-                </div>
-            </div>
-        <div></div>
-            <div class="home-img">
-                <div></div>
-                <img src="Portfolio/images/myphoto.jpeg" alt="Veronika Obrtelova">
-            </div>
+    <nav class="navbar hideOnMobile">
+      <ul class="navbar-list">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="toggleTheme()">🌓</a></li>
+      </ul>
+    </nav>
+
+    <nav class="sidebar">
+      <ul class="sidebar-list">
+        <li class="close-sidebar"><a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i></a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#" onclick="toggleTheme()">🌓</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <div class="text-content">
+        <h1>Hi, I'm</h1>
+        <h2>Veronika Ondrušová</h2>
+        <h3 class="text-animation">QA Engineer</h3>
+        <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
+        <div class="btn-group">
+          <a href="Veronika Obrtelova.cv.pdf" download class="btn btn-small">Download CV</a>
+          <a href="#contact" class="btn btn-small" onclick="openContact()">Contact</a>
         </div>
-    </section>
-    <section class="about-me" id="about-me">
-        <div class="about-me-content">
-            <h2>About Me</h2>
-            <div class="blue-line"></div>
-    
-            <h2>Work Experience</h2>
-    
-            <div class="job-entry">
-                <h3>02 IT Services s.r.o.</h3>
-                <p><strong>Duration:</strong> November 15, 2024 – Present</p>
-                <p><strong>Role:</strong> QA Tester for a web application developed for the Ministry of Agriculture.</p>
-                <p><strong>Responsibilities:</strong> Functional testing, bug reporting, collaboration with developers and analysts.</p>
-                <p><strong>Tech Stack:</strong> JIRA, Confluence, Postman, Jenkins, SQL Developer</p>
-            </div>
-    
-            <div class="job-entry">
-                <h3>Creditas Digital Factory s.r.o.</h3>
-                <p><strong>Duration:</strong> December 1, 2023 – February 29, 2024</p>
-                <p><strong>Role:</strong> Manual QA Tester</p>
-                <p><strong>Responsibilities:</strong> Manual and regression testing, bug reporting, team collaboration.</p>
-                <p><strong>Tech Stack:</strong> JIRA, Confluence, Kibana, JMeter</p>
-            </div>
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
+          <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail"><i class="far fa-envelope"></i></a>
         </div>
-    </section>
+      </div>
+      <div class="home-img">
+        <img src="Portfolio/images/myphoto.jpeg" alt="Veronika Obrtelova" />
+      </div>
+    </div>
+  </section>
+
+  <section class="about-me" id="about-me">
+    <div class="about-me-content">
+      <h2>About Me</h2>
+      <div class="blue-line"></div>
+
+      <h2>Work Experience</h2>
+
+      <div class="job-entry">
+        <h3>02 IT Services s.r.o.</h3>
+        <p><strong>Duration:</strong> November 15, 2024 – Present</p>
+        <p><strong>Role:</strong> QA Tester for a web application developed for the Ministry of Agriculture.</p>
+        <p><strong>Responsibilities:</strong> Functional testing, bug reporting, collaboration with developers and analysts.</p>
+        <p><strong>Tech Stack:</strong> JIRA, Confluence, Postman, Jenkins, SQL Developer</p>
+      </div>
+
+      <div class="job-entry">
+        <h3>Creditas Digital Factory s.r.o.</h3>
+        <p><strong>Duration:</strong> December 1, 2023 – February 29, 2024</p>
+        <p><strong>Role:</strong> Manual QA Tester</p>
+        <p><strong>Responsibilities:</strong> Manual and regression testing, bug reporting, team collaboration.</p>
+        <p><strong>Tech Stack:</strong> JIRA, Confluence, Kibana, JMeter</p>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
+
             </ul>
         </div>
         <div class="about-me-section">
