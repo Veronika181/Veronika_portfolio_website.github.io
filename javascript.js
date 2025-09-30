@@ -60,7 +60,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 // EmailJS odeslání formuláře
 document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init('YOUR_PUBLIC_KEY'); // Získáš v EmailJS dashboardu
+  emailjs.init('PTUbFi2NjixnnIzIs'); 
 
   const form = document.getElementById('contact-form');
   const status = document.getElementById('form-status');
