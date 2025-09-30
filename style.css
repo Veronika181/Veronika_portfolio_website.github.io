@@ -163,3 +163,77 @@ h2 {
     }
 }
 
+/* MOBILNÍ ZOBRAZENÍ */
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .job-entry,
+  .portfolio-list li,
+  .skill {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .skills-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .navbar-list.show {
+    display: flex;
+  }
+}
+
+/* NOTEBOOK / TABLET */
+@media (min-width: 769px) and (max-width: 1199px) {
+  .wrapper {
+    padding: 20px 40px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .skills-list {
+    justify-content: space-around;
+  }
+
+  .navbar-list {
+    justify-content: center;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1200px) {
+  .wrapper {
+    padding: 40px 80px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  .skills-list {
+    justify-content: space-between;
+  }
+
+  .navbar-list {
+    justify-content: flex-end;
+  }
+}
+
