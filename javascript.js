@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Kliknutí na křížek
     closeSidebarButton.addEventListener('click', function() {
         sidebar.classList.remove('show');
-    });
+    });jjjj
 
     // Kliknutí na odkaz v navigačním menu
     document.querySelectorAll('.sidebar-list a').forEach(function(link) {
