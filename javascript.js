@@ -3,11 +3,14 @@ function toggleSidebar() {
   document.querySelector('.sidebar').classList.toggle('show');
 }
 
-// === Přepínač světlý/tmavý režim ===
-function toggleTheme() {
-  document.body.classList.toggle('light-mode');
-  localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+document.getElementById("language-switcher").value = "cz";
+document.getElementById("language-switcher-sidebar").value = "cz";
+
+function switchLanguage(lang) {
+  document.getElementById("language-switcher").value = lang;
+  document.getElementById("language-switcher-sidebar").value = lang;
 }
+
 
 // === Scroll na kontakt ===
 function openContact() {
@@ -78,5 +81,50 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+
+const translations = {
+  cz: {
+    home: "Domů",
+    aboutMe: "O mně",
+    skills: "Dovednosti",
+    projects: "Projekty",
+    contact: "Kontakt",
+    greeting: "Ahoj, jsem",
+    role: "QA Testerka",
+    description: "Jsem nadšená testerka z Ostravy.",
+    contactMe: "Kontaktujte mě",
+    downloadCV: "Stáhnout CV"
+  },
+  en: {
+    home: "Home",
+    aboutMe: "About Me",
+    skills: "Skills",
+    projects: "Projects",
+    contact: "Contact",
+    greeting: "Hi, I'm",
+    role: "QA Engineer",
+    description: "I'm a passionate QA engineer from Ostrava.",
+    contactMe: "Contact Me",
+    downloadCV: "Download CV"
+  }
+};
+
+function switchLanguage(lang) {
+  document.querySelector(".navbar-list li a[href='#home']").textContent = translations[lang].home;
+  document.querySelector(".navbar-list li a[href='#about-me']").textContent = translations[lang].aboutMe;
+  document.querySelector(".navbar-list li a[href='#skills']").textContent = translations[lang].skills;
+  document.querySelector(".navbar-list li a[href='#projects']").textContent = translations[lang].projects;
+  document.querySelector(".navbar-list li a[href='#contact']").textContent = translations[lang].contact;
+  document.querySelector(".text-content h1").textContent = translations[lang].greeting;
+  document.querySelector(".text-animation").textContent = translations[lang].role;
+  document.querySelector(".text-content p").textContent = translations[lang].description;
+  document.querySelector(".btn-group a[href='CV-Veronika Ondrušova (1).pdf']").textContent = "🚀 " + translations[lang].downloadCV;
+  document.querySelector(".btn-group a[href='#contact']").textContent = "📬 " + translations[lang].contactMe;
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark-mode");
+}
+
 
 

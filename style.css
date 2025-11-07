@@ -222,3 +222,34 @@ h2 {
     text-align: center;
   }
 }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --accent-color: #0077cc;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --accent-color: #66ccff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--accent-color);
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+}
+
