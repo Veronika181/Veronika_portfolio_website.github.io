@@ -125,6 +125,94 @@ function switchLanguage(lang) {
 function toggleTheme() {
   document.body.classList.toggle("dark-mode");
 }
+// Toggle sidebar
+function toggleSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('active');
+}
+
+// Toggle theme
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+}
+
+// Language switcher
+function switchLanguage(lang) {
+  // Placeholder: implement actual language switching logic
+  alert(`Language switched to ${lang.toUpperCase()}`);
+}
+
+// Highlight active nav link
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelectorAll('nav a').forEach(el => el.classList.remove('active'));
+    link.classList.add('active');
+  });
+});
+const typewriterText = document.getElementById("typewriter-text");
+const roles = ["QA Engineer", "Test Analyst", "Bug Hunter"];
+let index = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < roles[index].length) {
+    typewriterText.textContent += roles[index].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, 100);
+  } else {
+    setTimeout(erase, 2000);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    typewriterText.textContent = roles[index].substring(0, charIndex - 1);
+    charIndex--;
+    setTimeout(erase, 50);
+  } else {
+    index = (index + 1) % roles.length;
+    setTimeout(type, 500);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", type);
+function toggleTheme() {
+  document.body.classList.toggle("dark-theme");
+  localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+}
+
+// Load theme on page load
+document.addEventListener("DOMContentLoaded", () => {
+  if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-theme");
+  }
+});
+emailjs.init("YOUR_USER_ID");
+
+document.getElementById("contact-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const btnText = document.getElementById("btn-text");
+  const btnLoader = document.getElementById("btn-loader");
+  const status = document.getElementById("form-status");
+
+  btnText.classList.add("hidden");
+  btnLoader.classList.remove("hidden");
+
+  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+    .then(() => {
+      status.textContent = "✅ Message sent successfully!";
+      this.reset();
+    })
+    .catch(() => {
+      status.textContent = "❌ Something went wrong. Please try again.";
+    })
+    .finally(() => {
+      btnText.classList.remove("hidden");
+      btnLoader.classList.add("hidden");
+    });
+});
+
 
 
 

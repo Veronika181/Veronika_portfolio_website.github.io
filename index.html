@@ -3,177 +3,217 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="QA Portfolio of Veronika Ondrušová – showcasing skills in manual and automated testing, projects, and contact info." />
   <title>Veronika Ondrušová – QA Portfolio</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
 </head>
 <body>
-<nav class="navbar hideOnMobile">
-  <ul class="navbar-list">
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about-me">About Me</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+
+<!-- Desktop Navigation -->
+<nav class="navbar hide-on-mobile" role="navigation" aria-label="Main Navigation">
+  <ul class="navbar__list">
+    <li><a href="#home" class="navbar__link active">Home</a></li>
+    <li><a href="#about-me" class="navbar__link">About Me</a></li>
+    <li><a href="#skills" class="navbar__link">Skills</a></li>
+    <li><a href="#projects" class="navbar__link">Projects</a></li>
+    <li><a href="#contact" class="navbar__link">Contact</a></li>
     <li>
+      <label for="language-switcher" class="visually-hidden">Language</label>
       <select id="language-switcher" onchange="switchLanguage(this.value)">
         <option value="cz">🇨🇿 CZ</option>
-        <option value="en">🇬🇧 EN</option>
+        <option value="en" selected>🇬🇧 EN</option>
       </select>
     </li>
-    <li><a href="#" onclick="toggleTheme()">🌗</a></li>
+    <li><a href="#" onclick="toggleTheme()" aria-label="Toggle Theme">🌗</a></li>
   </ul>
 </nav>
 
-<nav class="sidebar">
-  <ul class="sidebar-list">
-    <li class="close-sidebar">
-      <a href="#" onclick="toggleSidebar()"><i class="fas fa-times"></i></a>
+<!-- Mobile Sidebar -->
+<nav class="sidebar" role="navigation" aria-label="Sidebar Navigation">
+  <ul class="sidebar__list">
+    <li class="sidebar__close">
+      <a href="#" onclick="toggleSidebar()" aria-label="Close Sidebar"><i class="fas fa-times"></i></a>
     </li>
-    <li><a href="#home" class="active">Home</a></li>
-    <li><a href="#about-me">About Me</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#contact">Contact</a></li>
+    <li><a href="#home" class="sidebar__link active">Home</a></li>
+    <li><a href="#about-me" class="sidebar__link">About Me</a></li>
+    <li><a href="#skills" class="sidebar__link">Skills</a></li>
+    <li><a href="#projects" class="sidebar__link">Projects</a></li>
+    <li><a href="#contact" class="sidebar__link">Contact</a></li>
     <li>
+      <label for="language-switcher-sidebar" class="visually-hidden">Language</label>
       <select id="language-switcher-sidebar" onchange="switchLanguage(this.value)">
         <option value="cz">🇨🇿 CZ</option>
-        <option value="en">🇬🇧 EN</option>
+        <option value="en" selected>🇬🇧 EN</option>
       </select>
     </li>
-    <li><a href="#" onclick="toggleTheme()">🌗</a></li>
+    <li><a href="#" onclick="toggleTheme()" aria-label="Toggle Theme">🌗</a></li>
   </ul>
 </nav>
 
+<section class="home" id="home">
+  <div class="home-content">
+    <div class="text-content">
+      <h1>Hi, I'm</h1>
+      <h2><span class="highlight">Veronika Ondrušová</span></h2>
+      <h3 class="typewriter"><span id="typewriter-text"></span></h3>
+      <p>I’m a passionate QA engineer based in Ostrava, Czech Republic, focused on delivering quality through precision and collaboration.</p>
 
-  <section class="home" id="home">
-    <div class="home-content">
-      <div class="text-content">
-        <h1>Hi, I'm</h1>
-        <h2>Veronika Ondrušová</h2>
-        <h3 class="text-animation">QA Engineer</h3>
-        <p>I am a passionate QA engineer from Ostrava, Czech Republic.</p>
-        <div class="btn-group">
-          <a href="CV-Veronika Ondrušova (1).pdf" download class="btn btn-small">🚀 Download CV</a>
-          <a href="#contact" class="btn btn-small" onclick="openContact()">📬 Contact</a>
+      <div class="btn-group">
+        <a href="CV-Veronika Ondrušova (1).pdf" download class="btn btn-small">🚀 Download CV</a>
+        <a href="#contact" class="btn btn-small" onclick="openContact()">📬 Contact</a>
+      </div>
+
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin" aria-label="LinkedIn Profile" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/veronika181" class="github" aria-label="GitHub Profile" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail" aria-label="Email Veronika">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="home-img">
+      <img src="images/myphoto.jpeg" alt="Portrait of Veronika Ondrušová" />
+    </div>
+  </div>
+</section>
+
+<section class="about-me" id="about-me">
+  <div class="about-me-content">
+    <h2>About Me</h2>
+    <p>
+      I specialize in manual and automated testing of web applications, with experience in government and fintech sectors. I thrive in agile teams, enjoy collaborating with developers and analysts, and love transforming edge cases into meaningful test scenarios.
+    </p>
+
+    <h2>Work Experience</h2>
+
+    <article class="job-entry">
+      <h3>02 IT Services s.r.o.</h3>
+      <p><strong>Duration:</strong> November 2024 – Present</p>
+      <p><strong>Role:</strong> QA Tester for a government web application (Ministry of Agriculture)</p>
+      <p><strong>Responsibilities:</strong> Functional testing, bug reporting, sprint planning, and cross-functional collaboration.</p>
+      <p><strong>Tech Stack:</strong> JIRA, Confluence, Postman, Jenkins, SQL Developer</p>
+    </article>
+
+    <article class="job-entry">
+      <h3>Creditas Digital Factory s.r.o.</h3>
+      <p><strong>Duration:</strong> December 2023 – February 2024</p>
+      <p><strong>Role:</strong> Manual QA Tester</p>
+      <p><strong>Responsibilities:</strong> Manual and regression testing, bug documentation, and agile team support.</p>
+      <p><strong>Tech Stack:</strong> JIRA, Confluence, Kibana, JMeter</p>
+    </article>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="skills-content">
+    <h2 class="section-title">Skills & Tools</h2>
+    <p class="section-subtitle">Technologies I use for testing, automation, and collaboration</p>
+
+    <div class="skills-grid">
+      <div class="tech-card" aria-label="Postman – API testing">
+        <img src="images/postman.png" alt="Postman logo" />
+        <span>Postman</span>
+      </div>
+      <div class="tech-card" aria-label="Selenium – UI automation">
+        <img src="images/selenium.png" alt="Selenium logo" />
+        <span>Selenium</span>
+      </div>
+      <div class="tech-card" aria-label="JIRA – Issue tracking">
+        <img src="images/jira.png" alt="JIRA logo" />
+        <span>JIRA</span>
+      </div>
+      <div class="tech-card" aria-label="HTML – Markup language">
+        <img src="images/html.png" alt="HTML logo" />
+        <span>HTML</span>
+      </div>
+      <div class="tech-card" aria-label="CSS – Styling language">
+        <img src="images/css.png" alt="CSS logo" />
+        <span>CSS</span>
+      </div>
+      <div class="tech-card" aria-label="JavaScript – Programming language">
+        <img src="images/javascript.svg" alt="JavaScript logo" />
+        <span>JavaScript</span>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="projects" id="projects">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">Real-world examples of my testing and frontend skills</p>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <a href="https://veronika-to-do-list.netlify.app/" target="_blank" class="project-image-container" aria-label="Visit To Do List project">
+          <img src="images/Todolist.png" alt="Screenshot of To Do List project" class="project-image" />
+        </a>
+        <div class="project-info">
+          <h3>To Do List App</h3>
+          <p>
+            A dynamic task manager built with HTML, CSS, and JavaScript. Features include task creation, completion toggles, and local storage. Demonstrates DOM manipulation and UI logic.
+          </p>
+          <div class="button-container">
+            <a href="https://veronika-to-do-list.netlify.app/" class="btn btn-small">🔗 Live Demo</a>
+            <a href="https://github.com/Veronika181/To-Do-List" class="btn btn-small">💻 View Code</a>
+          </div>
         </div>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin"><i class="fab fa-linkedin"></i></a>
-          <a href="https://github.com/veronika181" class="github"><i class="fab fa-github"></i></a>
-          <a href="mailto:veronika.obrtelova181@gmail.com" class="gmail"><i class="far fa-envelope"></i></a>
+      </article>
+
+      <article class="project-card">
+        <a href="https://veronika-javascript-slider.netlify.app/" target="_blank" class="project-image-container" aria-label="Visit JavaScript Slider project">
+          <img src="images/Javascriptslider.png" alt="Screenshot of JavaScript Slider project" class="project-image" />
+        </a>
+        <div class="project-info">
+          <h3>JavaScript Image Slider</h3>
+          <p>
+            A responsive image carousel built with vanilla JavaScript. Includes arrow navigation and scroll support. Highlights event handling and dynamic DOM updates.
+          </p>
+          <div class="button-container">
+            <a href="https://veronika-javascript-slider.netlify.app/" class="btn btn-small">🔗 Live Demo</a>
+            <a href="https://github.com/Veronika181/Javascript-Slider" class="btn btn-small">💻 View Code</a>
+          </div>
         </div>
-      </div>
-      <div class="home-img">
-        <img src="images/myphoto.jpeg" alt="Veronika Ondrušová" />
-      </div>
+      </article>
     </div>
-  </section>
-
-  <section class="about-me" id="about-me">
-    <div class="about-me-content">
-      <h2>About Me</h2>
-      <p>
-        With a background in manual and automated testing, I’ve worked on web applications for government and fintech sectors.
-        I thrive in agile teams, love collaborating with developers and analysts, and enjoy turning edge cases into test cases.
-      </p>
-
-      <h2>Work Experience</h2>
-      <div class="job-entry">
-        <h3>02 IT Services s.r.o.</h3>
-        <p><strong>Duration:</strong> November 2024 – Present</p>
-        <p><strong>Role:</strong> QA Tester for a web application developed for the Ministry of Agriculture.</p>
-        <p><strong>Responsibilities:</strong> Functional testing, bug reporting, collaboration with developers and analysts.</p>
-        <p><strong>Tech Stack:</strong> JIRA, Confluence, Postman, Jenkins, SQL Developer</p>
-      </div>
-
-      <div class="job-entry">
-        <h3>Creditas Digital Factory s.r.o.</h3>
-        <p><strong>Duration:</strong> December 2023 – February 2024</p>
-        <p><strong>Role:</strong> Manual QA Tester</p>
-        <p><strong>Responsibilities:</strong> Manual and regression testing, bug reporting, team collaboration.</p>
-        <p><strong>Tech Stack:</strong> JIRA, Confluence, Kibana, JMeter</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="skills" id="skills">
-    <div class="skills-content">
-      <h2>Skills & Tools</h2>
-      <div class="skills-grid">
-        <div class="tech-card"><img src="images/postman.png" alt="Postman" /><span>Postman</span></div>
-        <div class="tech-card"><img src="images/selenium.png" alt="Selenium" /><span>Selenium</span></div>
-        <div class="tech-card"><img src="images/jira.png" alt="JIRA" /><span>JIRA</span></div>
-        <div class="tech-card"><img src="images/html.png" alt="HTML" /><span>HTML</span></div>
-        <div class="tech-card"><img src="images/css.png" alt="CSS" /><span>CSS</span></div>
-        <div class="tech-card"><img src="images/javascript.svg" alt="JavaScript" /><span>JavaScript</span></div>
-      </div>
-    </div>
-  </section>
-
-    <section class="projects" id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-content">
-                <div class="project">
-                    <div class="project-card">
-                        <a href="https://veronika-to-do-list.netlify.app/" target="_blank" class="project-image-container">
-                            <img src="images/Todolist.png" alt="To Do List project" class="project-image">
-                        </a>
-                        <div class="project-info">
-                            <h2>To do list</h2>
-                            <p class="project-description">
-                                This project showcases the implementation of a simple and intuitive To-Do List application. Built with HTML, CSS, and JavaScript, this project demonstrates how to create a dynamic and interactive user interface for managing daily tasks. From adding new tasks to marking them as complete, this application provides a seamless experience for organizing your to-dos.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://veronika-to-do-list.netlify.app/" class="project-link">Visit Website</a>
-                                <a href="https://github.com/Veronika181/To-Do-List" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <div class="project">
-                    <div class="project-card">
-                        <a href="https://veronika-javascript-slider.netlify.app/" target="_blank" class="project-image-container">
-                            <img src="images/Javascriptslider.png" alt="JavaScript Slider project" class="project-image">
-                        </a>
-                        <div class="project-info">
-                            <h2>JavaScript slider</h2>
-                            <p class="project-description">
-                                This project showcases the implementation of a simple image slider created using pure JavaScript. The slider allows users to navigate through a collection of images by clicking left and right arrows or by scrolling up and down. This project demonstrates how to create an interactive and dynamic slider that you can easily customize to fit your needs.
-                            </p>
-                            <div class="button-container">
-                                <a href="https://veronika-javascript-slider.netlify.app/" class="project-link">Visit Website</a>
-                                <a href="https://github.com/Veronika181/Javascript-Slider" class="project-link">View Code</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-  
-            </div>
-     
+  </div>
+</section>
 
 <section class="contact" id="contact">
   <div class="contact-content">
-    <h2>Contact Me</h2>
-    <p>Send me a message and I'll get back to you!</p>
+    <h2 class="section-title">Contact Me</h2>
+    <p class="section-subtitle">Feel free to reach out — I’d love to hear from you!</p>
 
-    <form id="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="user_name" required placeholder="Your name" />
+    <form id="contact-form" aria-label="Contact Form">
+      <div class="form-group">
+        <label for="name"><i class="fas fa-user"></i> Name</label>
+        <input type="text" id="name" name="user_name" required placeholder="Your full name" />
+      </div>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="user_email" required placeholder="Your email" />
+      <div class="form-group">
+        <label for="email"><i class="fas fa-envelope"></i> Email</label>
+        <input type="email" id="email" name="user_email" required placeholder="Your email address" />
+      </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required placeholder="Your message"></textarea>
+      <div class="form-group">
+        <label for="message"><i class="fas fa-comment-dots"></i> Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+      </div>
 
-      <button type="submit" class="btn">Send Message</button>
+      <button type="submit" class="btn" aria-label="Send Message">
+        <span id="btn-text">Send Message</span>
+        <span id="btn-loader" class="hidden"><i class="fas fa-spinner fa-spin"></i></span>
+      </button>
     </form>
 
-    <p id="form-status"></p>
+    <p id="form-status" role="status" aria-live="polite"></p>
   </div>
 </section>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
