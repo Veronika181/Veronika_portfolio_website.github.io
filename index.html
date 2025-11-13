@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,11 +7,11 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Jazykový přepínač jako ikonka -->
+  <!-- Language switcher icon -->
   <div class="language-switcher-icon">
-    <button id="lang-toggle" aria-label="Změnit jazyk">🌐</button>
+    <button id="lang-toggle" aria-label="Change language">🌐</button>
     <ul class="lang-dropdown" id="lang-dropdown">
-      <li><button onclick="switchLanguage('cs')">🇨🇿 Čeština</button></li>
+      <li><button onclick="switchLanguage('cs')">🇨🇿 Czech</button></li>
       <li><button onclick="switchLanguage('en')">🇬🇧 English</button></li>
     </ul>
   </div>
@@ -20,203 +20,184 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="nav__logo">Veronika Ondrušová</a>
-
-      <!-- Hamburger ikona -->
       <button class="nav__toggle" id="nav-toggle" aria-label="Menu">☰</button>
-
-      <!-- Navigační menu -->
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
-          <li><a href="#about" class="nav__link">O mně</a></li>
-          <li><a href="#skills" class="nav__link">Pracovní zkušenosti</a></li>
-          <li><a href="#skills" class="nav__link">Dovednosti</a></li>
-          <li><a href="#projects" class="nav__link">Osobní projekty</a></li>
-          <li><a href="#contact" class="nav__link">Kontakt</a></li>
+          <li><a href="#jobs" class="nav__link">Work Experience</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#projects" class="nav__link">Personal Projects</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
       </div>
     </nav>
   </header>
 
   <!--==================== MAIN ====================-->
-<main class="main">
-  <section class="home section">
-    <div class="container home__grid">
-      
-      <!-- Levá část: text -->
-      <div class="home__content">
-        <h1 class="home__title" id="homeTitle">👩‍💻 QA Testerka</h1>
-        <p id="homeText">
-          Zaměřuji se na kvalitu softwaru, testování a spolupráci s vývojovým týmem.
-        </p>
-        <a href="#contact" class="button" id="buttonText">Spolupracujme</a>
-        <a href="Životopis-Veronika Ondrušová.pdf" download class="btn btn-small btn-purple" aria-label="Stáhnout životopis">
-  📄 Stáhni si moje CV</a>
+  <main class="main">
+    <section class="home section">
+      <div class="container home__grid">
+        <div class="home__content">
+          <h1 class="home__title" id="homeTitle">👩‍💻 QA Tester</h1>
+          <p id="homeText">I focus on software quality, testing, and collaboration with the development team.</p>
+          <a href="#contact" class="button" id="buttonText">Let's Collaborate</a>
+          <a href="Životopis-Veronika Ondrušová.pdf" download class="btn btn-small btn-purple" aria-label="Download CV">📄 Download My CV</a>
 
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin" aria-label="LinkedIn profile" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/veronika181" class="github" aria-label="GitHub profile" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
 
-     <!-- Sociální sítě -->
-<div class="social-icons">
-  <a href="https://www.linkedin.com/in/veronika-obrtelová/" class="linkedin" aria-label="LinkedIn profil Veroniky" target="_blank" rel="noopener">
-    <i class="fab fa-linkedin"></i>
-  </a>
-  <a href="https://github.com/veronika181" class="github" aria-label="GitHub profil Veroniky" target="_blank" rel="noopener">
-    <i class="fab fa-github"></i>
-  </a>
-</div>
-
-      <!-- Pravá část: obrázek -->
-      <div class="home__image-wrapper">
-        <img src="img copy.jpeg" alt="Veronika Ondrušová" class="home__image" />
-      </div>
-
-    </div>
-  </section>
-</main>
-
-    <!--==================== ABOUT ====================-->
-<section class="about section" id="about">
-  <h2 class="section__title about__title"><span>O </span> mně</span></h2>
-  <div class="container grid">
-  
-      <p class="about__description">
-      <p>Jsem Veronika Ondrušová – 👩‍💻 QA testerka ve společnosti O2 IT Services. Zaměřuji se na testování webových aplikací pro geografické informační systémy.</p>
-      </p>
-    </div>
-  </div>
-</section>
-
-
-<section class="jobs section" id="jobs">
-  <h2 class="section__title jobs__title"><span>Pracovní</span>zkušenosti</h2>
-  <div class="container grid">
-
-    <!-- O2 IT Services -->
-    <div class="jobs__item services__item">
-      <h3>👩‍💻 Softwarový tester O2 IT Services</h3>
-      <p><strong>Období:</strong> listopad 2024 – současnost · Olomouc · Hybridní</p>
-      <p><strong>Projekt:</strong> Ministerstvo zemědělství ČR – LPIS (Land Parcel Identification System)</p>
-      <p>Testování webové aplikace LPIS pro správu zemědělských parcel. Používám Java, testovací nástroje a spolupracuji na zajištění kvality systému pro státní správu.</p>
-    </div>
-
-    <!-- Creditas Bank -->
-    <div class="jobs__item services__item">
-      <h3>📱 Softwarový tester – Creditas Bank</h3>
-      <p><strong>Období:</strong> prosinec 2023 – březen 2024 · Olomouc · Na místě</p>
-      <p>Testování mobilních a webových aplikací banky Creditas. Zaměření na iOS, Kibana a další nástroje pro sledování chyb, výkonu a uživatelského chování.</p>
-    </div>
-
-    <!-- Státní pozemkový úřad -->
-    <div class="jobs__item services__item">
-      <h3>📄 Referentka – Státní pozemkový úřad ČR</h3>
-      <p><strong>Období:</strong> 2021 · Opava · Na místě</p>
-      <p>Administrativní správa pozemkových úprav včetně komplexního zajištění celého procesu. Poskytovala jsem odbornou podporu v oblastech jako BPEJ, eroze, sucho a technická asistence. Zajišťovala jsem plynulý chod oddělení a spolupracovala s odbornými pracovníky na územních projektech.</p>
-    </div>
-
-  </div>
-</section>
-
-
-    <section class="services section" id="skills">
-      <h2 class="section__title"><span>Dovednosti</h2>
-      <div class="container grid">
-        <div class="services__item">✅ Automatizované testování (Selenium, Cypress)</div>
-        <div class="services__item">🧪 Manuální testování & bug tracking</div>
-        <div class="services__item">🎨 HTML, CSS, JavaScript, React</div>
-        <div class="services__item">📋 Testovací scénáře & dokumentace</div>
-        <div class="services__item">🔍 Analýza požadavků & UX testování</div>
+        <div class="home__image-wrapper">
+          <img src="img copy.jpeg" alt="Veronika Ondrušová" class="home__image" />
+        </div>
       </div>
     </section>
 
+<!--==================== JOBS ====================-->
+<section class="jobs section" id="jobs">
+  <h2 class="section__title"><span>Work</span> Experience</h2>
+  <div class="container grid">
+    <div class="jobs__item services__item">
+      <h3>👩‍💻 Software Tester – O2 IT Services</h3>
+      <p><strong>Period:</strong> November 2024 – Present · Olomouc · Hybrid</p>
+      <p><strong>Project:</strong> Ministry of Agriculture CZ – LPIS (Land Parcel Identification System)</p>
+      <p>Testing the LPIS web application for agricultural parcel management. I use Java, testing tools, and collaborate to ensure system quality for public administration.</p>
+    </div>
+
+    <div class="jobs__item services__item">
+      <h3>📱 Software Tester – Creditas Bank</h3>
+      <p><strong>Period:</strong> December 2023 – March 2024 · Olomouc · On-site</p>
+      <p>Testing mobile and web applications for Creditas Bank. Focused on iOS, Kibana, and other tools for bug tracking, performance, and user behavior.</p>
+    </div>
+
+    <div class="jobs__item services__item">
+      <h3>📄 Clerk – State Land Office CZ</h3>
+      <p><strong>Period:</strong> 2021 · Opava · On-site</p>
+      <p>Administrative management of land adjustments including full process coordination. Provided expert support in areas like BPEJ, erosion, drought, and technical assistance. Ensured smooth department operations and collaborated on regional projects.</p>
+    </div>
+  </div>
+</section>
+
+
+    <!--==================== SKILLS ====================-->
+    <section class="services section" id="skills">
+      <h2 class="section__title"><span>Skills</span></h2>
+      <div class="container grid">
+        <div class="services__item">✅ Automated Testing (Selenium, Cypress)</div>
+        <div class="services__item">🧪 Manual Testing & Bug Tracking</div>
+        <div class="services__item">🎨 HTML, CSS, JavaScript, React</div>
+        <div class="services__item">📋 Test Scenarios & Documentation</div>
+        <div class="services__item">🔍 Requirements Analysis & UX Testing</div>
+      </div>
+    </section>
+
+    <!--==================== PROJECTS ====================-->
     <section class="projects section" id="projects">
-      <h2 class="section__title"><span>Osobní</span>projekty</h2>
+      <h2 class="section__title"><span>Personal</span> Projects</h2>
 
       <div class="projects__category">
-        <h3>🧪 Automatizace testování</h3>
+        <h3>🧪 Test Automation</h3>
         <div class="projects__container container grid">
           <div class="projects__item">
             <h4>Selenium Automation Python</h4>
-            <p>Automatizované testy webových aplikací v Pythonu pomocí Selenium.</p>
-            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">Zobrazit projekt</a>
+            <p>Automated web application tests using Selenium in Python.</p>
+            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">View Project</a>
           </div>
           <div class="projects__item">
-            <h4>Playwright testy</h4>
-            <p>Testovací skripty pro moderní webové aplikace pomocí Playwright.</p>
-            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">Zobrazit projekt</a>
+            <h4>Playwright Tests</h4>
+            <p>Test scripts for modern web apps using Playwright.</p>
+            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">View Project</a>
           </div>
         </div>
       </div>
 
       <div class="projects__category">
-        <h3>💻 Web vývoj</h3>
+        <h3>💻 Web Development</h3>
         <div class="projects__container container grid">
           <div class="projects__item">
             <h4>Calorie App</h4>
-            <p>Vlastní návrh aplikace pro výpočet kalorií. HTML, CSS, JavaScript + návrh ve Figmě.</p>
-            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">Zobrazit projekt</a>
+            <p>Custom calorie calculator app. HTML, CSS, JavaScript + design in Figma.</p>
+            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">View Project</a>
           </div>
           <div class="projects__item">
             <h4>Weather App</h4>
-            <p>Aplikace zobrazující aktuální počasí pomocí OpenWeatherMap API.</p>
-            <a href="https://github.com/Veronika181/Weather-app" target="_blank">Zobrazit projekt</a>
+            <p>App displaying current weather using OpenWeatherMap API.</p>
+            <a href="https://github.com/Veronika181/Weather-app" target="_blank">View Project</a>
           </div>
           <div class="projects__item">
             <h4>Portfolio Website</h4>
-            <p>Osobní portfolio vytvořené jako statická webová stránka.</p>
-            <a href="https://github.com/Veronika181/Veronika_portfolio_website.github.io" target="_blank">Zobrazit projekt</a>
+            <p>Personal portfolio built as a static website.</p>
+            <a href="https://github.com/Veronika181/Veronika_portfolio_website.github.io" target="_blank">View Project</a>
           </div>
           <div class="projects__item">
             <h4>JavaScript Slider</h4>
-            <p>Interaktivní posuvník pro webové rozhraní.</p>
-            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">Zobrazit projekt</a>
+            <p>Interactive slider for web interface.</p>
+            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">View Project</a>
           </div>
         </div>
       </div>
 
       <div class="projects__category">
-        <h3>🔌 API & nástroje</h3>
+        <h3>🔌 APIs & Tools</h3>
         <div class="projects__container container grid">
           <div class="projects__item">
             <h4>Postman Challenge</h4>
-            <p>Testování REST API pomocí Postmanu – kolekce, validace, dokumentace.</p>
-            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">Zobrazit projekt</a>
+            <p>REST API testing with Postman – collections, validation, documentation
+      <div class="projects__category">
+        <h3>🔌 APIs & Tools</h3>
+        <div class="projects__container container grid">
+          <div class="projects__item">
+            <h4>Postman Challenge</h4>
+            <p>REST API testing using Postman – collections, validation, documentation.</p>
+            <a href="https://github.com/Veronika181/SeleniumAutomationPythonCourse" target="_blank">View Project</a>
           </div>
           <div class="projects__item">
-            <h4>GitHub Profil Config</h4>
-            <p>README a konfigurace pro personalizaci GitHub profilu.</p>
-            <a href="https://github.com/Veronika181/Veronika181" target="_blank">Zobrazit projekt</a>
+            <h4>GitHub Profile Config</h4>
+            <p>README and configuration for personalizing GitHub profile.</p>
+            <a href="https://github.com/Veronika181/Veronika181" target="_blank">View Project</a>
           </div>
         </div>
       </div>
 
       <div class="projects__category">
-        <h3>🎓 Kurzy & vzdělávání</h3>
+        <h3>🎓 Courses & Education</h3>
         <div class="projects__container container grid">
           <div class="projects__item">
             <h4>Czechitas</h4>
-            <p>Digitální akademie|Testování</p>
-
-            <span></span>
+            <p>Digital Academy | Testing</p>
           </div>
           <div class="projects__item">
             <h4>Pyladies</h4>
-            <p>Základy programování v Pythonu</p>
-            <span></span>
+            <p>Python Programming Basics</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!--==================== CONTACT ====================-->
     <section class="contact section" id="contact">
-      <h2 class="section__title" id="contactTitle"><span>Kontaktuj</span> mě</h2>
+      <h2 class="section__title" id="contactTitle"><span>Contact</span> Me</h2>
       <form class="contact__form container">
-        <input type="text" placeholder="Vaše jméno" class="contact__input" />
-        <input type="email" placeholder="Váš e-mail" class="contact__input" />
-        <textarea placeholder="Vaše zpráva" class="contact__input"></textarea>
-        <button type="submit" class="button" id="contactButton">Odeslat zprávu</button>
+        <input type="text" placeholder="Your Name" class="contact__input" />
+        <input type="email" placeholder="Your Email" class="contact__input" />
+        <textarea placeholder="Your Message" class="contact__input"></textarea>
+        <button type="submit" class="button" id="contactButton">Send Message</button>
       </form>
     </section>
   </main>
 
+  <!--==================== FOOTER ====================-->
   <footer class="footer grid">
     <p>&copy; 2025 Veronika Ondrušová – QA Tester</p>
     <div class="footer__links">
-      <a href="https
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+    </div>
+  </footer>
+</body>
+</html>
