@@ -1,217 +1,115 @@
-// === Mobilní menu ===
-function toggleSidebar() {
-  document.querySelector('.sidebar').classList.toggle('show');
-}
+/*=============== SHOW/HIDE MENU ===============*/
+const navToggle = document.getElementById('nav-toggle');
+const navMenu = document.getElementById('nav-menu');
+const navLinks = document.querySelectorAll('.nav__link');
 
-document.getElementById("language-switcher").value = "cz";
-document.getElementById("language-switcher-sidebar").value = "cz";
-
-function switchLanguage(lang) {
-  document.getElementById("language-switcher").value = lang;
-  document.getElementById("language-switcher-sidebar").value = lang;
-}
-
-
-// === Scroll na kontakt ===
-function openContact() {
-  const contactSection = document.getElementById('contact');
-  if (contactSection) {
-    contactSection.scrollIntoView({ behavior: 'smooth' });
-  }
-}
-
-// === Zavření sidebaru kliknutím mimo ===
-document.addEventListener('click', function (event) {
-  const sidebar = document.querySelector('.sidebar');
-  const menuButton = document.querySelector('.menu-button');
-  if (
-    sidebar.classList.contains('show') &&
-    !sidebar.contains(event.target) &&
-    !menuButton.contains(event.target)
-  ) {
-    sidebar.classList.remove('show');
-  }
-});
-
-// === Zvýraznění aktivní sekce v navigaci ===
-window.addEventListener('scroll', () => {
-  const sections = document.querySelectorAll('section');
-  const navLinks = document.querySelectorAll('.navbar-list a, .sidebar-list a');
-
-  let current = '';
-  sections.forEach(section => {
-    const sectionTop = section.offsetTop - 100;
-    if (window.scrollY >= sectionTop) {
-      current = section.getAttribute('id');
-    }
+if (navToggle && navMenu) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('show-menu');
   });
-
-  navLinks.forEach(link => {
-    link.classList.remove('active');
-    if (link.getAttribute('href') === `#${current}`) {
-      link.classList.add('active');
-    }
-  });
-});
-
-// === Načtení preferovaného režimu ===
-window.addEventListener('DOMContentLoaded', () => {
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'light') {
-    document.body.classList.add('light-mode');
-  }
-});
-// EmailJS odeslání formuláře
-document.addEventListener('DOMContentLoaded', function () {
-  emailjs.init('PTUbFi2NjixnnIzIs'); 
-
-  const form = document.getElementById('contact-form');
-  const status = document.getElementById('form-status');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-      .then(() => {
-        status.textContent = '✅ Message sent successfully!';
-        form.reset();
-      }, (error) => {
-        status.textContent = '❌ Failed to send message. Please try again.';
-        console.error('EmailJS error:', error);
-      });
-  });
-});
-
-const translations = {
-  cz: {
-    home: "Domů",
-    aboutMe: "O mně",
-    skills: "Dovednosti",
-    projects: "Projekty",
-    contact: "Kontakt",
-    greeting: "Ahoj, jsem",
-    role: "QA Testerka",
-    description: "Jsem nadšená testerka z Ostravy.",
-    contactMe: "Kontaktujte mě",
-    downloadCV: "Stáhnout CV"
-  },
-  en: {
-    home: "Home",
-    aboutMe: "About Me",
-    skills: "Skills",
-    projects: "Projects",
-    contact: "Contact",
-    greeting: "Hi, I'm",
-    role: "QA Engineer",
-    description: "I'm a passionate QA engineer from Ostrava.",
-    contactMe: "Contact Me",
-    downloadCV: "Download CV"
-  }
-};
-
-function switchLanguage(lang) {
-  document.querySelector(".navbar-list li a[href='#home']").textContent = translations[lang].home;
-  document.querySelector(".navbar-list li a[href='#about-me']").textContent = translations[lang].aboutMe;
-  document.querySelector(".navbar-list li a[href='#skills']").textContent = translations[lang].skills;
-  document.querySelector(".navbar-list li a[href='#projects']").textContent = translations[lang].projects;
-  document.querySelector(".navbar-list li a[href='#contact']").textContent = translations[lang].contact;
-  document.querySelector(".text-content h1").textContent = translations[lang].greeting;
-  document.querySelector(".text-animation").textContent = translations[lang].role;
-  document.querySelector(".text-content p").textContent = translations[lang].description;
-  document.querySelector(".btn-group a[href='CV-Veronika Ondrušova (1).pdf']").textContent = "🚀 " + translations[lang].downloadCV;
-  document.querySelector(".btn-group a[href='#contact']").textContent = "📬 " + translations[lang].contactMe;
 }
 
-function toggleTheme() {
-  document.body.classList.toggle("dark-mode");
-}
-// Toggle sidebar
-function toggleSidebar() {
-  const sidebar = document.querySelector('.sidebar');
-  sidebar.classList.toggle('active');
-}
-
-// Toggle theme
-function toggleTheme() {
-  document.body.classList.toggle('dark-theme');
-}
-
-// Language switcher
-function switchLanguage(lang) {
-  // Placeholder: implement actual language switching logic
-  alert(`Language switched to ${lang.toUpperCase()}`);
-}
-
-// Highlight active nav link
-document.querySelectorAll('nav a').forEach(link => {
+navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    document.querySelectorAll('nav a').forEach(el => el.classList.remove('active'));
-    link.classList.add('active');
+    navMenu.classList.remove('show-menu');
   });
 });
-const typewriterText = document.getElementById("typewriter-text");
-const roles = ["QA Engineer", "Test Analyst", "Bug Hunter"];
-let index = 0;
-let charIndex = 0;
 
-function type() {
-  if (charIndex < roles[index].length) {
-    typewriterText.textContent += roles[index].charAt(charIndex);
-    charIndex++;
-    setTimeout(type, 100);
-  } else {
-    setTimeout(erase, 2000);
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('section[id]');
+
+function scrollActive() {
+  const scrollY = window.pageYOffset;
+
+  sections.forEach(section => {
+    const sectionHeight = section.offsetHeight;
+    const sectionTop = section.offsetTop - 50;
+    const sectionId = section.getAttribute('id');
+    const navItem = document.querySelector(`.nav__menu a[href*=${sectionId}]`);
+
+    if (navItem) {
+      if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+        navItem.classList.add('active-link');
+      } else {
+        navItem.classList.remove('active-link');
+      }
+    }
+  });
+}
+window.addEventListener('scroll', scrollActive);
+
+/*=============== CHANGE HEADER BACKGROUND ON SCROLL ===============*/
+function scrollHeader() {
+  const header = document.getElementById('header');
+  if (header) {
+    header.classList.toggle('scroll-header', window.scrollY >= 80);
   }
 }
+window.addEventListener('scroll', scrollHeader);
 
-function erase() {
-  if (charIndex > 0) {
-    typewriterText.textContent = roles[index].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, 50);
-  } else {
-    index = (index + 1) % roles.length;
-    setTimeout(type, 500);
-  }
+/*=============== DARK/LIGHT THEME TOGGLE ===============*/
+const themeButton = document.getElementById('theme-button');
+const darkTheme = 'dark-theme';
+const iconTheme = 'sun-icon';
+
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+const getCurrentTheme = () =>
+  document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () =>
+  themeButton.classList.contains(iconTheme) ? 'moon-icon' : 'sun-icon';
+
+if (selectedTheme) {
+  document.body.classList.toggle(darkTheme, selectedTheme === 'dark');
+  themeButton.classList.toggle(iconTheme, selectedIcon === 'moon-icon');
 }
 
-document.addEventListener("DOMContentLoaded", type);
-function toggleTheme() {
-  document.body.classList.toggle("dark-theme");
-  localStorage.setItem("theme", document.body.classList.contains("dark-theme") ? "dark" : "light");
+if (themeButton) {
+  themeButton.addEventListener('click', () => {
+    document.body.classList.toggle(darkTheme);
+    themeButton.classList.toggle(iconTheme);
+
+    localStorage.setItem('selected-theme', getCurrentTheme());
+    localStorage.setItem('selected-icon', getCurrentIcon());
+  });
 }
 
-// Load theme on page load
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("theme") === "dark") {
-    document.body.classList.add("dark-theme");
+/*=============== LANGUAGE SWITCHER ===============*/
+const langToggle = document.getElementById('lang-toggle');
+const langDropdown = document.getElementById('lang-dropdown');
+
+if (langToggle && langDropdown) {
+  langToggle.addEventListener('click', () => {
+    langDropdown.style.display =
+      langDropdown.style.display === 'block' ? 'none' : 'block';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+      langDropdown.style.display = 'none';
+    }
+  });
+}
+
+async function switchLanguage(lang) {
+  try {
+    const res = await fetch('lang.json');
+    const data = await res.json();
+    const content = data[lang];
+
+    document.documentElement.lang = lang;
+    document.getElementById('homeTitle').textContent = content.homeTitle;
+    document.getElementById('homeText').textContent = content.homeText;
+    document.getElementById('buttonText').textContent = content.buttonText;
+    document.getElementById('aboutTitle').innerHTML = `<span>${content.aboutTitle}</span>`;
+    document.getElementById('aboutText').textContent = content.aboutText;
+    document.getElementById('contactTitle').innerHTML = `<span>${content.contactTitle}</span>`;
+    document.getElementById('contactButton').textContent = content.contactButton;
+  } catch (error) {
+    console.error('Chyba při načítání jazykového souboru:', error);
   }
-});
-emailjs.init("YOUR_USER_ID");
-
-document.getElementById("contact-form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  const btnText = document.getElementById("btn-text");
-  const btnLoader = document.getElementById("btn-loader");
-  const status = document.getElementById("form-status");
-
-  btnText.classList.add("hidden");
-  btnLoader.classList.remove("hidden");
-
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
-    .then(() => {
-      status.textContent = "✅ Message sent successfully!";
-      this.reset();
-    })
-    .catch(() => {
-      status.textContent = "❌ Something went wrong. Please try again.";
-    })
-    .finally(() => {
-      btnText.classList.remove("hidden");
-      btnLoader.classList.add("hidden");
-    });
-});
+}
 
 
 
