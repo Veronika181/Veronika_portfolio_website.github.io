@@ -153,6 +153,19 @@ async function switchLanguage(lang) {
   }
 }
 
+/*=============== CONTACT FORM MESSAGE ===============*/
+const contactForm = document.querySelector('.contact__form');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function (e) {
+    e.preventDefault(); // zabrání reloadu stránky
+
+    // Tady později přidáš odeslání na backend / EmailJS / Formspree
+
+    alert("Děkujeme za zprávu! Vaše zpráva byla úspěšně odeslána.");
+    contactForm.reset();
+  });
+}
 
 
 
