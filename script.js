@@ -156,14 +156,43 @@ async function switchLanguage(lang) {
 /*=============== CONTACT FORM MESSAGE ===============*/
 const contactForm = document.querySelector('.contact__form');
 
+// Initialize EmailJS
+(function () {
+  emailjs.init("Nmzb4GYNtHeOeRfM0"); // Public Key
+})();
+
 if (contactForm) {
   contactForm.addEventListener('submit', function (e) {
-    e.preventDefault(); // zabrání reloadu stránky
+    e.preventDefault();
 
-    // Tady později přidáš odeslání na backend / EmailJS / Formspree
+    const formData = {
+      from_name: contactForm.elements['name'].value,
+      from_email: contactForm.elements['email'].value,
+      message: contactForm.elements['message'].value,
+      to_email: "veronika.obrtelova@seznam.cz"
+    };
 
-    alert("Děkujeme za zprávu! Vaše zpráva byla úspěšně odeslána.");
-    contactForm.reset();
+    const button = contactForm.querySelector('button[type="submit"]');
+    const originalText = button.textContent;
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    emailjs
+      .send("service_qz93g4b", "template_9cvklkh", formData)
+      .then(
+        function (response) {
+          alert("Děkujeme za zprávu! Vaše zpráva byla úspěšně odeslána.");
+          contactForm.reset();
+          button.disabled = false;
+          button.textContent = originalText;
+        },
+        function (error) {
+          alert("Chyba! Zpráva se nepodařila odeslat. Zkuste to prosím později.");
+          console.error("EmailJS Error:", error);
+          button.disabled = false;
+          button.textContent = originalText;
+        }
+      );
   });
 }
 
