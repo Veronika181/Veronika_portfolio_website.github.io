@@ -68,7 +68,7 @@ img { display: block; max-width: 100%; height: auto; }
 
 /*=============== HEADER & NAV ===============*/
 .header { position: fixed; top: 0; width: 100%; height: var(--header-height); background-color: var(--container-color); z-index: var(--z-fixed); transition: background-color 0.3s ease, box-shadow 0.3s ease; }
-.header.scroll-header { background-color: rgba(13, 19, 38, 0.95); box-shadow: 0 6px 20px rgba(0,0,0,0.25); backdrop-filter: blur(12px); }
+.header.scroll-header { background-color: rgba(13, 19, 38, 0.95); box-shadow: 0 6px 20px rgba(0,0,0,0.25); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
 .nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; position: relative; }
 .nav__menu { display: flex; gap: 2rem; }
 .nav__list { display: flex; gap: 2rem; list-style: none; }
@@ -93,7 +93,7 @@ img { display: block; max-width: 100%; height: auto; }
 .home { display: flex; align-items: center; justify-content: center; height: 100vh; background: var(--container-color); }
 .home__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 2rem; padding-block: 5rem 2rem; }
 .home__content { display: flex; flex-direction: column; gap: 1.5rem; }
-.home__title { font-size: var(--biggest-font-size); background: linear-gradient(90deg, var(--first-color), var(--first-color-alt)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.home__title { font-size: var(--biggest-font-size); background: linear-gradient(90deg, var(--first-color), var(--first-color-alt)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
 #homeText { font-size: var(--normal-font-size); color: var(--text-color); line-height: 1.6; }
 
 /* Profilová fotka */

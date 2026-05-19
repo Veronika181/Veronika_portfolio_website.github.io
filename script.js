@@ -58,7 +58,7 @@ function scrollActive() {
     const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - 50;
     const sectionId = section.getAttribute('id');
-    const navItem = document.querySelector(`.nav__menu a[href*=${sectionId}]`);
+    const navItem = document.querySelector(`.nav__menu a[href*="${sectionId}"]`);
 
     if (navItem) {
       if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
@@ -91,11 +91,13 @@ const selectedIcon = localStorage.getItem('selected-icon');
 const getCurrentTheme = () =>
   document.body.classList.contains(darkTheme) ? 'dark' : 'light';
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? 'moon-icon' : 'sun-icon';
+  themeButton && themeButton.classList.contains(iconTheme) ? 'moon-icon' : 'sun-icon';
 
 if (selectedTheme) {
   document.body.classList.toggle(darkTheme, selectedTheme === 'dark');
-  themeButton.classList.toggle(iconTheme, selectedIcon === 'moon-icon');
+  if (themeButton) {
+    themeButton.classList.toggle(iconTheme, selectedIcon === 'moon-icon');
+  }
 }
 
 if (themeButton) {
@@ -132,13 +134,20 @@ async function switchLanguage(lang) {
     const content = data[lang];
 
     document.documentElement.lang = lang;
-    document.getElementById('homeTitle').textContent = content.homeTitle;
-    document.getElementById('homeText').textContent = content.homeText;
-    document.getElementById('buttonText').textContent = content.buttonText;
-    document.getElementById('aboutTitle').innerHTML = `<span>${content.aboutTitle}</span>`;
-    document.getElementById('aboutText').textContent = content.aboutText;
-    document.getElementById('contactTitle').innerHTML = `<span>${content.contactTitle}</span>`;
-    document.getElementById('contactButton').textContent = content.contactButton;
+    const setText = (id, value, useHTML = false) => {
+      const element = document.getElementById(id);
+      if (!element) return;
+      if (useHTML) element.innerHTML = value;
+      else element.textContent = value;
+    };
+
+    setText('homeTitle', content.homeTitle);
+    setText('homeText', content.homeText);
+    setText('buttonText', content.buttonText);
+    setText('aboutTitle', `<span>${content.aboutTitle}</span>`, true);
+    setText('aboutText', content.aboutText);
+    setText('contactTitle', `<span>${content.contactTitle}</span>`, true);
+    setText('contactButton', content.contactButton);
   } catch (error) {
     console.error('Chyba při načítání jazykového souboru:', error);
   }
