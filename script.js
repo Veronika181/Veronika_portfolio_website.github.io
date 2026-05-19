@@ -3,31 +3,48 @@ const navToggle = document.getElementById('nav-toggle');
 const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav__link');
 
+function updateMenuState(open) {
+  if (navToggle) navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  if (navMenu) navMenu.classList.toggle('show-menu', open);
+}
+
 if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('show-menu');
+    const isOpen = navMenu.classList.contains('show-menu');
+    updateMenuState(!isOpen);
   });
 }
 
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    navMenu.classList.remove('show-menu');
+    updateMenuState(false);
 
-    // Add active-link class on click and remove from others
     navLinks.forEach(l => l.classList.remove('active-link'));
     link.classList.add('active-link');
   });
 });
 
-// Set active-link based on current hash on load
-document.addEventListener('DOMContentLoaded', () => {
+function setActiveLinkByHash() {
   const currentHash = window.location.hash;
-  if (currentHash) {
-    const active = document.querySelector(`.nav__menu a[href="${currentHash}"]`);
-    if (active) {
-      navLinks.forEach(l => l.classList.remove('active-link'));
-      active.classList.add('active-link');
-    }
+  if (!currentHash) return;
+
+  const active = document.querySelector(`.nav__menu a[href="${currentHash}"]`);
+  if (active) {
+    navLinks.forEach(l => l.classList.remove('active-link'));
+    active.classList.add('active-link');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setActiveLinkByHash();
+  scrollActive();
+});
+
+window.addEventListener('hashchange', setActiveLinkByHash);
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape' && navMenu && navMenu.classList.contains('show-menu')) {
+    updateMenuState(false);
   }
 });
 
