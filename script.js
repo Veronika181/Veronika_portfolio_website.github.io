@@ -12,7 +12,23 @@ if (navToggle && navMenu) {
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navMenu.classList.remove('show-menu');
+
+    // Add active-link class on click and remove from others
+    navLinks.forEach(l => l.classList.remove('active-link'));
+    link.classList.add('active-link');
   });
+});
+
+// Set active-link based on current hash on load
+document.addEventListener('DOMContentLoaded', () => {
+  const currentHash = window.location.hash;
+  if (currentHash) {
+    const active = document.querySelector(`.nav__menu a[href="${currentHash}"]`);
+    if (active) {
+      navLinks.forEach(l => l.classList.remove('active-link'));
+      active.classList.add('active-link');
+    }
+  }
 });
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
