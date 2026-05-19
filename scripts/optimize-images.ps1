@@ -2,7 +2,8 @@
 # Requires ImageMagick (magick) and cwebp installed.
 # Usage: Open PowerShell in project root and run: .\scripts\optimize-images.ps1
 
-$projectRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
+$scriptFolder = Split-Path -Parent $MyInvocation.MyCommand.Path
+$projectRoot = Split-Path -Parent $scriptFolder
 Set-Location $projectRoot
 
 $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
@@ -21,6 +22,13 @@ Write-Host "Created backups: $imageBackup and $htmlBackup"
 
 $hasMagick = Get-Command magick -ErrorAction SilentlyContinue
 $hasCwebp = Get-Command cwebp -ErrorAction SilentlyContinue
+
+if (-not $hasMagick -and -not $hasCwebp) {
+    Write-Host "Neither ImageMagick (magick) nor cwebp were found. Install one or both tools before running this script." -ForegroundColor Red
+    Write-Host "- ImageMagick: https://imagemagick.org/script/download.php" -ForegroundColor Yellow
+    Write-Host "- cwebp: https://developers.google.com/speed/webp/download" -ForegroundColor Yellow
+    exit 1
+}
 
 Get-ChildItem -Path ".\images" -Recurse -Include *.jpg,*.jpeg,*.png | ForEach-Object {
     $file = $_.FullName
@@ -55,14 +63,20 @@ if ($hasCwebp) {
                 return $match.Value
             }
 
-            return "<picture><source type=\"image/webp\" srcset=\"$webpPath\">$($match.Value)</picture>"
+            return '<picture><source type="image/webp" srcset="' + $webpPath + '">' + $match.Value + '</picture>'
         }, [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
 
         Set-Content -Path $file -Value $content -Encoding utf8
     }
     Write-Host "Converted HTML img tags to picture elements where WebP files exist."
 } else {
-    Write-Host "cwebp not found; only image recompression ran. Install cwebp for WebP generation and HTML conversion." -ForegroundColor Yellow
+    Write-Host "cwebp not found; WebP generation and HTML conversion were skipped." -ForegroundColor Yellow
+    Write-Host "Install cwebp to enable WebP output: https://developers.google.com/speed/webp/download" -ForegroundColor Yellow
+}
+
+if (-not $hasMagick) {
+    Write-Host "ImageMagick not found; image recompression was skipped." -ForegroundColor Yellow
+    Write-Host "Install ImageMagick to enable recompression: https://imagemagick.org/script/download.php" -ForegroundColor Yellow
 }
 
 Write-Host "Done. Review backups, optimized images, and updated HTML files."
