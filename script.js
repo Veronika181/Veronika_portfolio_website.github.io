@@ -154,47 +154,21 @@ async function switchLanguage(lang) {
 }
 
 /*=============== CONTACT FORM MESSAGE ===============*/
-const contactForm = document.querySelector('.contact__form');
 
-// Initialize EmailJS
-(function () {
-  emailjs.init("ZlRTfscNPUkYM7zHS"); // Public Key
-})();
 
-if (contactForm) {
-  contactForm.addEventListener('submit', function (e) {
-    e.preventDefault();
+/*=============== LANGUAGE SWITCHER ===============*/
+const langToggle = document.getElementById('lang-toggle');
+const langDropdown = document.getElementById('lang-dropdown');
 
-    const formData = {
-      from_name: contactForm.elements['name'].value,
-      from_email: contactForm.elements['email'].value,
-      message: contactForm.elements['message'].value,
-      to_email: "veronika.obrtelova181@gmail.com"
-    };
+if (langToggle && langDropdown) {
+  langToggle.addEventListener('click', () => {
+    langDropdown.style.display =
+      langDropdown.style.display === 'block' ? 'none' : 'block';
+  });
 
-    const button = contactForm.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-    button.disabled = true;
-    button.textContent = "Sending...";
-
-    emailjs
-      .send("service_qz93g4b", "template_9cvklkh", formData)
-      .then(
-        function (response) {
-          alert("Děkujeme za zprávu! Vaše zpráva byla úspěšně odeslána.");
-          contactForm.reset();
-          button.disabled = false;
-          button.textContent = originalText;
-        },
-        function (error) {
-          alert("Chyba! Zpráva se nepodařila odeslat. Zkuste to prosím později.");
-          console.error("EmailJS Error:", error);
-          button.disabled = false;
-          button.textContent = originalText;
-        }
-      );
+  document.addEventListener('click', (e) => {
+    if (!langToggle.contains(e.target) && !langDropdown.contains(e.target)) {
+      langDropdown.style.display = 'none';
+    }
   });
 }
-
-
-

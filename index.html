@@ -18,7 +18,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet" />
   <title>QA Automation Engineer | Selenium + Java | Playwright | CI/CD</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -320,15 +319,25 @@
       <div class="container grid">
         <div class="about__item contact__details">
           <p>I’m actively seeking QA Automation Engineer roles where I can contribute to automation, E2E stability and quality-focused delivery. Reach out if you need a skilled QA specialist to improve test coverage and reduce release risk.</p>
-          <p><strong>Phone:</strong> <a href="tel:+420604163329">+420 604 163 329</a></p>
-          <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/veronika-obrtelov%C3%A1/" target="_blank" rel="noopener noreferrer">linkedin.com/in/veronika-obrtelov%C3%A1</a></p>
+          <div class="contact__methods">
+            <div class="contact__method">
+              <strong>Email</strong>
+              <a href="mailto:veronika.obrtelova181@gmail.com?subject=QA%20Automation%20Opportunity" class="contact__link">veronika.obrtelova181@gmail.com</a>
+            </div>
+            <div class="contact__method">
+              <strong>Phone</strong>
+              <a href="tel:+420604163329" class="contact__link">+420 604 163 329</a>
+            </div>
+            <div class="contact__method">
+              <strong>LinkedIn</strong>
+              <a href="https://www.linkedin.com/in/veronika-obrtelov%C3%A1/" target="_blank" rel="noopener noreferrer" class="contact__link">linkedin.com/in/veronika-obrtelov%C3%A1</a>
+            </div>
+          </div>
         </div>
-        <form class="contact__form" novalidate>
-          <input type="text" name="name" placeholder="Your Name" class="contact__input" required />
-          <input type="email" name="email" placeholder="Your Email" class="contact__input" required />
-          <textarea name="message" placeholder="Your Message" class="contact__input" required></textarea>
-          <button type="submit" class="button" id="contactButton">Send Message</button>
-        </form>
+        <div class="contact__actions">
+          <a href="mailto:veronika.obrtelova181@gmail.com?subject=QA%20Automation%20Opportunity&body=Hello%20Veronika%2C%0A%0AI%20am%20interested%20in%20discussing%20a%20QA%20Automation%20opportunity%20with%20you." class="button button-large" id="contactButton">Send Email</a>
+          <a href="https://www.linkedin.com/in/veronika-obrtelov%C3%A1/" target="_blank" rel="noopener noreferrer" class="button button-large button-secondary">Message on LinkedIn</a>
+        </div>
       </div>
     </section>
   </main>
