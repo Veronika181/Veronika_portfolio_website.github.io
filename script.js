@@ -169,7 +169,7 @@ if (contactForm) {
       from_name: contactForm.elements['name'].value,
       from_email: contactForm.elements['email'].value,
       message: contactForm.elements['message'].value,
-      to_email: "veronika.obrtelova@seznam.cz"
+      to_email: "veronika.obrtelova181@gmail.com"
     };
 
     const button = contactForm.querySelector('button[type="submit"]');
