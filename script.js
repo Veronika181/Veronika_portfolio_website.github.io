@@ -158,7 +158,7 @@ const contactForm = document.querySelector('.contact__form');
 
 // Initialize EmailJS
 (function () {
-  emailjs.init("Nmzb4GYNtHeOeRfM0"); // Public Key
+  emailjs.init("ZlRTfscNPUkYM7zHS"); // Public Key
 })();
 
 if (contactForm) {
