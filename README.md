@@ -21,3 +21,5 @@ About Me Section: A section detailing my work experience and education.
 Skills Section: A display of my skills categorized into frontend development, backend development, testing, and other skills.
 Projects Section: Showcases my projects with descriptions, images, and links to live demos and source code.
 Contact Section: A contact form powered by Formspree.io for users to get in touch with me.
+
+<img width="1750" height="1054" alt="Portfolio " src="https://github.com/user-attachments/assets/ec7a3f34-1674-4f91-8fc2-a90a581757bd" />
